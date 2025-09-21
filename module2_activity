@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Events in the Philippines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: #f5f5f5;
+        }
+        header {
+            background: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            background: white;
+        }
+        h2, h3 {
+            color: #003366;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: #fafafa;
+        }
+        table, th, td {
+            border: 1px solid #333;
+            text-align: center;
+            padding: 10px;
+        }
+        img, iframe {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Recent Events in the Philippines</h1>
+        <nav>
+            <ul>
+                <li><a href="#flood">Flood Control</a></li>
+                <li><a href="#discayas">The Discayas</a></li>
+                <li><a href="#march">Trillion Peso March</a></li>
+                <li><a href="#corruption">Corruption</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <h2>Overview</h2>
+        <p>
+            The Philippines has been facing several challenges and movements in recent years, ranging 
+            from natural disasters to socio-political issues. This page highlights some of the 
+            significant events: the government’s flood control efforts, the "Discayas" controversy, 
+            the historic "Trillion Peso March," and ongoing corruption concerns.
+        </p>
+
+        <h3>Key Issues Today</h3>
+        <ul>
+            <li id="flood">Flood Control Projects and Climate Preparedness</li>
+            <li id="discayas">The Discayas Issue and Its Impact</li>
+            <li id="march">The Trillion Peso March and People’s Voices</li>
+            <li id="corruption">Corruption and Calls for Transparency</li>
+        </ul>
+
+        <h3>Summary Table</h3>
+        <table>
+            <tr>
+                <th>Event</th>
+                <th>Category</th>
+                <th>Impact</th>
+            </tr>
+            <tr>
+                <td>Flood Control</td>
+                <td>Infrastructure / Environment</td>
+                <td>Prevention of future flooding, safety of communities</td>
+            </tr>
+            <tr>
+                <td>The Discayas</td>
+                <td>Social / Political</td>
+                <td>Public debate, awareness, and controversy</td>
+            </tr>
+            <tr>
+                <td>Trillion Peso March</td>
+                <td>Political Protest</td>
+                <td>Mass mobilization for accountability and reforms</td>
+            </tr>
+            <tr>
+                <td>
