@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <div class="site-wrapper">
+    <div id="top" class="site-wrapper">
 
     <section class="hero" role="banner">
         <nav class="navbar">
@@ -27,6 +27,8 @@
         </header>
     </section>
 
+    <hr class="section-break">
+
     <main>
         <section id="about">
             <h2>About Me</h2>
@@ -42,9 +44,12 @@
             </div>
         </section>
 
-        <hr>
+    <hr>
 
-        <section id="projects">
+    <!-- Parallax image section -->
+    <section class="parallax" style="background-image: url('parallax.jpg');" aria-hidden="true"></section>
+
+    <section id="projects">
             <h2>Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
@@ -143,10 +148,8 @@
                 </svg>
             </a>
         </div>
-        <div class="footer-links">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+        <div class="footer-utility">
+            <button class="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">Back to top</button>
         </div>
     </footer>
     </div> <!-- .site-wrapper -->

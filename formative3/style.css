@@ -27,9 +27,7 @@ body {
 
 .hero .navbar {
   padding: 1% 0;
-  background: rgba(255,255,255,0.28); /* slightly translucent so background shows through */
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  background: #ffffff; /* white navbar as requested */
   position: relative;
   z-index: 2;
 }
@@ -41,26 +39,55 @@ body {
   padding: 3% 0 2% 0;
 }
 
-/* dark overlay for readability over hero image */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.22);
-  z-index: 1;
-}
-
-/* make the hero title and logo sit above the overlay */
+/* make the hero title and logo sit above the background image */
 .hero .main-header h1,
 .hero .logo {
   position: relative;
   z-index: 3;
-  color: #ffffff;
-  text-shadow: 0 4px 18px rgba(0,0,0,0.3);
+.footer-utility {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.back-to-top {
+  background: #12326b;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 2000;
+  box-shadow: 0 10px 30px rgba(18,50,107,0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-top:hover { background: #0f2550; transform: translateY(-2px); }
+
+@media (max-width: 700px) {
+  .back-to-top { right: 16px; bottom: 16px; padding: 10px 14px; }
+}
+  color: #1e3a8a; /* dark title so it contrasts over many images */
 }
 
 .hero .nav-links a {
-  color: #082147; /* keep links readable on translucent navbar */
+  color: #082147; /* keep links readable on white navbar */
+}
+
+/* PARALLAX SECTION - placeholder for user image */
+.parallax {
+  width: 100%;
+  height: 44vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 4% 0;
 }
 
 /* NAVIGATION BAR */
@@ -285,8 +312,8 @@ footer {
   opacity: 1;
 }
 
-.footer-social a svg { width: 26px; height: 26px; }
-.footer-social a { padding: 6px; border-radius: 6px; }
+.footer-social a svg { width: 40px; height: 40px; }
+.footer-social a { padding: 8px; border-radius: 8px; }
 
 .footer p {
   margin: 0;
