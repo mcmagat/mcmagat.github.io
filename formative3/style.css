@@ -1,8 +1,15 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
   background-color: #dce9fb;
   color: #222;
+}
+
+/* Page wrapper to control margins and center content */
+.site-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
 }
 
 /* NAVIGATION BAR */
@@ -10,7 +17,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1% 5%;
+  padding: 1% 0; /* horizontal spacing handled by .site-wrapper */
   background: transparent; /* no white background */
   box-shadow: 0 0.3% 0.5% rgba(0, 0, 0, 0.1);
 }
@@ -62,6 +69,20 @@ body {
   width: 80%;
   margin: 0 auto;
   text-align: left;
+}
+
+.about-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.about-content img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .about-section h2 {
