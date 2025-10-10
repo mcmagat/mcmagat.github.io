@@ -7,9 +7,9 @@ body {
 
 /* Page wrapper to control margins and center content */
 .site-wrapper {
-  max-width: 1000px;
+  max-width: 1200px; /* wider for laptop/desktop */
   margin: 0 auto;
-  padding: 24px;
+  padding: 32px;
 }
 
 /* NAVIGATION BAR */
@@ -122,8 +122,8 @@ body {
 
 .project-card {
   background: white;
-  border-radius: 2%;
-  box-shadow: 0 0.3% 0.5% rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: transform 0.3s ease;
 }
