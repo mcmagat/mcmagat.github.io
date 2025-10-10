@@ -18,13 +18,20 @@ body {
   display: block;
   width: 100%;
   min-height: 36vh; /* tall enough for title + nav */
+  background-image: url("hero section.jpg");
   background-size: cover;
   background-position: center;
   padding: 1% 0 3% 0;
+  position: relative;
 }
 
 .hero .navbar {
   padding: 1% 0;
+  background: rgba(255,255,255,0.28); /* slightly translucent so background shows through */
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  position: relative;
+  z-index: 2;
 }
 
 .hero .main-header {
@@ -32,6 +39,28 @@ body {
   align-items: center;
   justify-content: center;
   padding: 3% 0 2% 0;
+}
+
+/* dark overlay for readability over hero image */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.22);
+  z-index: 1;
+}
+
+/* make the hero title and logo sit above the overlay */
+.hero .main-header h1,
+.hero .logo {
+  position: relative;
+  z-index: 3;
+  color: #ffffff;
+  text-shadow: 0 4px 18px rgba(0,0,0,0.3);
+}
+
+.hero .nav-links a {
+  color: #082147; /* keep links readable on translucent navbar */
 }
 
 /* NAVIGATION BAR */
