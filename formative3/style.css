@@ -1,131 +1,101 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #dce9fb;
-  color: #222;
-}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #dceeff;
+        color: #0a0a0a;
+        margin: 0;
+        padding: 0;
+        font-size: 1.1vw; /* base font size */
+    }
 
-/* NAVIGATION BAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1% 5%;
-  background: transparent; /* no white background */
-  box-shadow: 0 0.3% 0.5% rgba(0, 0, 0, 0.1);
-}
+    header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 2%;
+        background-color: transparent; /* transparent navbar */
+    }
 
-.logo {
-  font-size: 150%;
-  font-weight: bold;
-  color: #1e3a8a;
-}
+    nav a {
+        margin-left: 2%;
+        text-decoration: none;
+        color: #004aad;
+        font-weight: bold;
+        font-size: 1.3vw; /* slightly bigger nav text */
+        transition: color 0.3s;
+    }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 5%;
-  margin: 0;
-  padding: 0;
-}
+    nav a:hover {
+        color: #002e6b;
+    }
 
-.nav-links a {
-  text-decoration: none;
-  color: #1e3a8a;
-  font-weight: bold;
-}
+    /* BIG MAIN TITLE */
+    h1 {
+        text-align: center;
+        margin: 3% 0;
+        color: #004aad;
+        font-size: 5vw; /* much larger and responsive */
+        font-weight: 800;
+        letter-spacing: 0.05em;
+    }
 
-.nav-links a:hover {
-  text-decoration: underline;
-}
+    section {
+        width: 80%;
+        margin: 0 auto 5%;
+    }
 
-/* MAIN TITLE BELOW NAVBAR */
-.main-header {
-  text-align: center;
-  margin-top: 3%;
-}
+    h2 {
+        font-size: 2.2vw;
+        color: #004aad;
+        margin-bottom: 1%;
+    }
 
-.main-header h1 {
-  font-size: 300%;
-  color: #1e3a8a;
-  margin: 0;
-}
+    p, li {
+        font-size: 1.2vw; /* slightly larger text for readability */
+        line-height: 1.7;
+    }
 
-.main-header h3 {
-  font-size: 150%;
-  color: #3b5998;
-  margin: 0.5% 0 3% 0;
-}
+    /* PROJECT GRID */
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+        gap: 3%;
+        margin-top: 3%;
+    }
 
-/* ABOUT SECTION */
-.about-section {
-  width: 80%;
-  margin: 0 auto;
-  text-align: left;
-}
+    .project-card {
+        background-color: #f7f9fc;
+        border-radius: 2%;
+        padding: 2%;
+        text-align: center;
+        box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
 
-.about-section h2 {
-  color: #1e3a8a;
-}
+    .project-card:hover {
+        transform: scale(1.02);
+    }
 
-.profile-img {
-  width: 30%;
-  border-radius: 5%;
-  display: block;
-  margin-bottom: 2%;
-}
+    .project-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 2%;
+    }
 
-/* PROJECTS SECTION */
-#projects {
-  width: 90%;
-  margin: 5% auto;
-  text-align: center;
-}
+    .project-content h3 {
+        color: #004aad;
+        margin: 2% 0 1%;
+        font-size: 1.5vw;
+    }
 
-#projects h2 {
-  color: #1e3a8a;
-  margin-bottom: 3%;
-}
+    .project-content p {
+        font-size: 1.1vw;
+    }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-  gap: 2%;
-  justify-content: center;
-}
-
-.project-card {
-  background: white;
-  border-radius: 2%;
-  box-shadow: 0 0.3% 0.5% rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: scale(1.03);
-}
-
-.project-card img {
-  width: 100%;
-  height: auto;
-}
-
-.project-content {
-  padding: 3%;
-  text-align: left;
-}
-
-/* CONTACT + FOOTER */
-.contact-section {
-  width: 80%;
-  margin: 5% auto;
-  text-align: center;
-}
-
-.footer {
-  text-align: center;
-  padding: 2% 0;
-  font-size: 90%;
-  color: #555;
-}
+    footer {
+        text-align: center;
+        padding: 2%;
+        font-size: 1vw;
+        background-color: #cbe1ff;
+    }
+</style>
