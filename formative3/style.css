@@ -18,8 +18,13 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1% 0; /* horizontal spacing handled by .site-wrapper */
-  background: transparent; /* no white background */
-  box-shadow: 0 0.3% 0.5% rgba(0, 0, 0, 0.1);
+  background: rgba(255,255,255,0.7); /* slight white glass effect */
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
