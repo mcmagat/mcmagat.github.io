@@ -7,10 +7,10 @@ body {
 
 /* Page wrapper to control margins and center content */
 .site-wrapper {
-  width: 100%; /* span full width */
-  max-width: none;
-  margin: 0; /* remove side margins */
-  padding: 2% 2%; /* percentage padding */
+  width: 100%;
+  max-width: 1100px; /* comfortable laptop width */
+  margin: 0 auto; /* center content */
+  padding: 2% 3%; /* side spacing */
 }
 
 /* NAVIGATION BAR */
@@ -160,9 +160,49 @@ body {
 
 /* CONTACT + FOOTER */
 .contact-section {
-  width: 96%;
-  margin: 5% 2%;
+  width: 100%;
+  margin: 5% 0;
   text-align: center;
+  background: rgba(30,58,138,0.04);
+  padding: 2% 3%;
+  border-radius: 8px;
+  box-shadow: 0 0.4% 1% rgba(0,0,0,0.04);
+}
+
+.contact-section a {
+  color: #12326b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Footer design */
+footer {
+  background: linear-gradient(180deg, rgba(30,58,138,0.05), rgba(30,58,138,0.1));
+  color: #1e293b;
+  padding: 2% 3%;
+  margin-top: 4%;
+  border-radius: 8px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.footer-links a {
+  color: #12326b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer p {
+  margin: 0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #12326b;
 }
 
 .footer {
