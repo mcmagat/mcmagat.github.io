@@ -1,15 +1,15 @@
 body {
   margin: 0;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background-color: #dce9fb;
   color: #222;
 }
 
 /* Page wrapper to control margins and center content */
 .site-wrapper {
-  max-width: 1200px; /* wider for laptop/desktop */
+  max-width: 1400px; /* wider for laptop/desktop */
   margin: 0 auto;
-  padding: 32px;
+  padding: 20px 24px; /* smaller vertical padding to fit more content */
 }
 
 /* NAVIGATION BAR */
@@ -114,10 +114,15 @@ body {
 }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-  gap: 2%;
-  justify-content: center;
+  /* Masonry-like layout using CSS columns so items fit image height */
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.project-card {
+  display: inline-block; /* keep cards from breaking columns */
+  width: 100%;
+  margin: 0 0 20px;
 }
 
 .project-card {
@@ -135,6 +140,16 @@ body {
 .project-card img {
   width: 100%;
   height: auto;
+}
+
+@media (max-width: 1000px) {
+  .project-grid { column-count: 2; }
+}
+
+@media (max-width: 600px) {
+  .project-grid { column-count: 1; }
+  .site-wrapper { padding: 16px; }
+  .main-header h1 { font-size: 220%; }
 }
 
 .project-content {
