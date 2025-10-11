@@ -1,121 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bea's Basket Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bea’s Basket - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-  <!-- NAVIGATION -->
-  <header>
-    <nav>
-      <a href="#about">About</a>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">Bea’s Basket</div>
+    <nav class="nav-links">
+      <a href="#about">About Me</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- Hero -->
   <section class="hero">
-    <div class="main-header">
-      <h1>Bea's Basket</h1>
-      <h2>Student Portfolio</h2>
+    <div class="hero-content">
+      <h1>Welcome to Bea’s Basket</h1>
+      <p>A curated portfolio of creativity, design, and inspiration.</p>
+      <a href="#projects" class="cta-btn">View My Work</a>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about">
+  <!-- About -->
+  <section id="about" class="about">
     <h2>About Me</h2>
     <div class="about-container">
-      <img src="IMG_9065 2.JPG" alt="Bea's photo" class="about-image">
-      <p>Hi! I'm Bea, a passionate multimedia arts student who loves blending creativity with design. 
-      My works explore illustration, branding, and storytelling — all inspired by culture and emotion. 
-      I aim to express ideas that connect and communicate meaningfully through every piece I create.</p>
+      <img src="IMG_9065 2.JPG" alt="Bea’s portrait" class="profile-photo">
+      <div class="about-text">
+        <p>Hello! My name is Bea, and I am a dedicated 2nd-year Multimedia Arts Student. Welcome to Bea’s Basket! A curated portfolio where I share my work, inspirations, and creative journey as I explore the world of digital design.</p>
+        <p>I love capturing moments through the lens and turning ideas into visual designs that speak to people. Whether I’m editing a photo, designing a logo, or working on layouts, I enjoy bringing out beauty and meaning in every project.</p>
+        <p>Outside of my creative work, I enjoy journaling, crocheting, listening to music, watching films, and exploring new places for inspiration.</p>
+      </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
+  <!-- Projects -->
+  <section id="projects" class="projects">
     <h2>Projects</h2>
     <div class="project-grid">
+
       <div class="project-card">
-        <img src="MAGAT_ACT1.png" alt="MAGAT ACT1">
-        <div class="project-content">
-          <h3>MUEASYC Logo</h3>
-          <p>This is my first logo design project for a class.</p>
-        </div>
+        <img src="MAGAT_ACT1.png" alt="MUEASYC Logo">
+        <h3>MUEASYC Logo</h3>
+        <p>This is my first logo design project for a class.</p>
       </div>
 
       <div class="project-card">
-        <img src="MAGAT_PUBMAT_ACT2.png" alt="MAGAT ACT2">
-        <div class="project-content">
-          <h3>MUEASYC Pubmat</h3>
-          <p>A promotional publication material for the app and logo I made.</p>
-        </div>
+        <img src="MAGAT_PUBMAT_ACT2.png" alt="MUEASYC Pubmat">
+        <h3>MUEASYC Pubmat</h3>
+        <p>A promotional publication material for the app and logo I made.</p>
       </div>
 
       <div class="project-card">
-        <img src="TF1_Magat.png" alt="TF1 Magat">
-        <div class="project-content">
-          <h3>OSAKA PostCard Greetings</h3>
-          <p>I made this for a typography class. We had to use font design to make a postcard presentable.</p>
-        </div>
+        <img src="TF1_Magat.png" alt="Osaka Postcard">
+        <h3>Osaka Postcard Greetings</h3>
+        <p>A postcard created for a typography class, emphasizing font design presentation.</p>
       </div>
 
       <div class="project-card">
-        <img src="LE4_MAGAT-1.png" alt="LE4 Magat">
-        <div class="project-content">
-          <h3>NEWSPAPER Layout</h3>
-          <p>This project focused on layout hierarchy and flow for easy reading.</p>
-        </div>
+        <img src="LE4_MAGAT-1.png" alt="Newspaper Layout">
+        <h3>Newspaper Layout</h3>
+        <p>Created for typography class, focusing on hierarchy and directional flow.</p>
       </div>
 
       <div class="project-card">
-        <img src="TSM.png" alt="TSM">
-        <div class="project-content">
-          <h3>TAMbayan TV Pubmat</h3>
-          <p>A “Coming Soon” pubmat for our content “Tambay sa Morayta.”</p>
-        </div>
+        <img src="TSM.png" alt="Tambayan TV Pubmat">
+        <h3>TAMbayan TV Coming Soon Pubmat</h3>
+        <p>A “Coming Soon” publication material for our content “Tambay sa Morayta.”</p>
       </div>
 
       <div class="project-card">
-        <img src="MMA0005_ACT 3_MAGAT.png" alt="ACT 3 MAGAT">
-        <div class="project-content">
-          <h3>Live Painting - Basket of Fruits</h3>
-          <p>One of my best works in traditional drawing using acrylic and colored pencils.</p>
-        </div>
+        <img src="MMA0005_ACT 3_MAGAT.png" alt="Live Painting">
+        <h3>Live Painting - Basket of Fruits</h3>
+        <p>A traditional art project using acrylic and colored pencils.</p>
       </div>
 
       <div class="project-card">
-        <img src="MMA0005L_MAGAT_TD01_MIDTERM.png" alt="MIDTERM MAGAT">
-        <div class="project-content">
-          <h3>Childhood's Over</h3>
-          <p>This painting depicts its title. Childhood is really over — my midterm project for a drawing class.</p>
-        </div>
+        <img src="MMA0005L_MAGAT_TD01_MIDTERM.png" alt="Childhood's Over">
+        <h3>Childhood’s Over</h3>
+        <p>This painting depicts the bittersweet theme of growing up, my midterm drawing project.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-info">
-      <p>If you'd like to get in touch, feel free to reach out through any of the platforms below:</p>
-      <ul>
-        <li><i class="fa-solid fa-envelope"></i> beasbasket@example.com</li>
-        <li><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/beasbasket" target="_blank">@beasbasket</a></li>
-        <li><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com/beasbasket" target="_blank">facebook.com/beasbasket</a></li>
-        <li><i class="fa-brands fa-behance"></i> <a href="https://behance.net/beasbasket" target="_blank">behance.net/beasbasket</a></li>
-      </ul>
-    </div>
-  </section>
+  <!-- Contact -->
+  <footer id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>You can reach me through the following:</p>
+    <ul class="contact-info">
+      <li>Email: <a href="mailto:mcmagat@fit.edu.ph">mcmagat@fit.edu.ph</a></li>
+      <li>Facebook: <a href="https://www.facebook.com/mariabeatrice.magat" target="_blank">Maria Beatrice Magat</a></li>
+      <li>Instagram: <a href="https://instagram.com/beananatrice" target="_blank">@beananatrice</a></li>
+    </ul>
 
-  <!-- FOOTER -->
-  <footer id="contact">
-    <p>© 2025 Bea's Basket | Designed by Bea</p>
+    <div class="social-icons">
+      <a href="https://instagram.com/beananatrice" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/mariabeatrice.magat" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="mailto:mcmagat@fit.edu.ph" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <p class="footer-note">&copy; 2025 Bea’s Basket. All Rights Reserved.</p>
   </footer>
-
 </body>
 </html>
