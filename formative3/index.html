@@ -1,139 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bea's Basket - Student Portfolio</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bea's Basket | Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-  <div id="top" class="site-wrapper">
-    <!-- HERO -->
-    <section class="hero" role="banner">
-      <nav class="navbar">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <header class="hero-header">
-        <h1>Bea’s Basket</h1>
-        <h3>Student Portfolio</h3>
-      </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bea’s Basket</h1>
+            <p>Student Portfolio</p>
+        </div>
     </section>
 
     <main>
-      <!-- ABOUT SECTION -->
-      <section id="about" class="about-section">
-        <h2>About Me</h2>
-        <div class="about-content">
-          <img src="IMG_9065 2.JPG" alt="Profile Picture" />
-          <div class="about-text">
-            <p>Hello! My name is Bea, and I am a dedicated 2nd-year Multimedia Arts Student. Welcome to Bea's Basket — a curated portfolio where I share my work, inspirations, and creative journey as I explore the world of digital design.</p>
-            <p>I love capturing moments through the lens and turning ideas into visual designs that speak to people. Whether I'm editing a photo, designing a logo, or working on layouts, I enjoy bringing out beauty and meaning in every project.</p>
-            <p>Outside of my creative work, I enjoy journaling, crocheting, listening to music, watching films, and exploring new places for inspiration. I'm always looking for ways to grow as an artist and connect with others who share my passion for creativity.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECTS SECTION -->
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-          <div class="project-card">
-            <img src="MAGAT_ACT1.png" alt="MAGAT ACT1" />
-            <div class="project-content">
-              <h3>MUEASYC Logo</h3>
-              <p>This is my first logo design project for a class.</p>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="profile.jpg" alt="Photo of Bea">
+                <p>
+                    Hello! My name is Bea, and I am a dedicated 2nd-year Multimedia Arts Student. 
+                    Welcome to Bea’s Basket — a curated portfolio where I share my work, inspirations, 
+                    and creative journey as I explore the world of digital design. 
+                    I love capturing moments through the lens and turning ideas into visual designs 
+                    that speak to people. Outside of creative work, I enjoy journaling, crocheting, 
+                    listening to music, and exploring new places for inspiration.
+                </p>
             </div>
-          </div>
+        </section>
 
-          <div class="project-card">
-            <img src="MAGAT_PUBMAT_ACT2.png" alt="MAGAT ACT2" />
-            <div class="project-content">
-              <h3>MUEASYC Pubmat</h3>
-              <p>A promotional publication material for the app and logo I made.</p>
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <h2>My Work</h2>
+            <div class="project-gallery">
+                <div class="project-card">
+                    <img src="MAGAT_ACT1.png" alt="MUEASYC Logo">
+                    <div class="overlay">
+                        <p>This is my first logo design. MUEASYC is an app that helps people learn different types of instruments and be into music more. The logo itself explains the brand identity and mission.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="MAGAT_PUBMAT_ACT2.png" alt="MUEASYC Pubmat">
+                    <div class="overlay">
+                        <p>Continuing the first one, this is a publication material for the app.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="TF1_Magat.png" alt="OSAKA PostCard Greetings">
+                    <div class="overlay">
+                        <p>A postcard from OSAKA. I made this for a Typography class. The background is a temple in Osaka, highlighting the place itself. The typography is inspired from Nihongo, giving more Japanese vibes.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="LE4_MAGAT-1.png" alt="NEWSPAPER DESIGN">
+                    <div class="overlay">
+                        <p>Another Typography class project. Arranging a newspaper layout, making sure it has proper hierarchy and is readable. The content of the newspaper is purely fictional.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="TSM.png" alt="Tambay Sa Morayta">
+                    <div class="overlay">
+                        <p>It's a publication material for my organization "TAMBayan TV". It captures the 'tambay' vibes based on the elements highlighted in the material. I also played with texture,lighting, and typography here.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="MMA0005_ACT 3_MAGAT.png" alt="Fruit Basket: Live Painting">
+                    <div class="overlay">
+                        <p>It's a still life live painting activity for a Drawing class. I've used two mediums: watercolor and colored pencil to achieve basic lighting and texturing.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="MMA0005L_MAGAT_TD01_MIDTERM.png" alt="Childhood is Over: traditional drawing">
+                    <div class="overlay">
+                        <p>"Childhood is over" is my first surrealistic painting. It depicts a drawing that seems to be painted by a child, and big scissors poking holes everywhere, tearing the drawing."</p>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <div class="project-card">
-            <img src="TF1_Magat.png" alt="TF1 Magat" />
-            <div class="project-content">
-              <h3>OSAKA PostCard Greetings</h3>
-              <p>A typography-based postcard project using font design.</p>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img src="LE4_MAGAT-1.png" alt="LE4 Magat" />
-            <div class="project-content">
-              <h3>NEWSPAPER Layout</h3>
-              <p>Typography project demonstrating hierarchy and flow.</p>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img src="TSM.png" alt="TSM" />
-            <div class="project-content">
-              <h3>TAMbayan TV Pubmat</h3>
-              <p>“Coming Soon” pubmat for Tambay sa Morayta content.</p>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img src="MMA0005_ACT 3_MAGAT.png" alt="ACT 3 MAGAT" />
-            <div class="project-content">
-              <h3>Basket of Fruits</h3>
-              <p>Live painting using acrylic and colored pencils.</p>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img src="MMA0005L_MAGAT_TD01_MIDTERM.png" alt="MIDTERM MAGAT" />
-            <div class="project-content">
-              <h3>Childhood's Over</h3>
-              <p>A painting depicting the bittersweet end of childhood.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT SECTION -->
-      <section id="contact" class="contact-section">
-        <h2>Contact Me</h2>
-        <p>Let's connect!</p>
-        <ul>
-          <li>Email: <a href="mailto:mcmagat@fit.edu.ph">mcmagat@fit.edu.ph</a></li>
-          <li>Facebook: <a href="https://www.facebook.com/mariabeatrice.magat" target="_blank">Maria Beatrice Magat</a></li>
-          <li>Instagram: <a href="https://instagram.com/beananatrice" target="_blank">@beananatrice</a></li>
-        </ul>
-
-        <div class="socials">
-          <!-- Email -->
-          <a href="mailto:mcmagat@fit.edu.ph" title="Email">
-            <img src="email-icon.svg" alt="Email">
-          </a>
-          <!-- Facebook -->
-          <a href="https://www.facebook.com/mariabeatrice.magat" target="_blank" title="Facebook">
-            <img src="facebook-icon.svg" alt="Facebook">
-          </a>
-          <!-- Instagram -->
-          <a href="https://instagram.com/beananatrice" target="_blank" title="Instagram">
-            <img src="instagram-icon.svg" alt="Instagram">
-          </a>
-        </div>
-      </section>
+        </section>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Bea’s Basket. All rights reserved.</p>
+    <!-- Footer -->
+    <footer id="contact">
+        <p>Connect with me</p>
+        <div class="social-icons">
+            <a href="mailto:example@email.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="footer-text">&copy; 2025 Bea’s Basket. All Rights Reserved.</p>
     </footer>
-  </div>
 </body>
 </html>
