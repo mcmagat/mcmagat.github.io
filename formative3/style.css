@@ -278,6 +278,11 @@ footer h2 {
   transform: scale(1.1);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* FOOTER */
 footer {
   background-color: #f9f0e0;
