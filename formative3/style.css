@@ -372,12 +372,12 @@ footer {
 }
 
 .divider span {
-  color: var(--gold);
-  color:#3e2f1c
+  color: #3e2f1c;
   font-size: 1.5rem;
   font-style: italic;
   letter-spacing: 3px;
 }
+
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
