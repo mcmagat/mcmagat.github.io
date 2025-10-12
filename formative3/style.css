@@ -161,6 +161,44 @@ footer h2 {
   font-style: italic;
 }
 
+/* ===== PHOTOGRAPHY SECTION ===== */
+.photography {
+  padding: 6rem 3rem;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.photography h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-text {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
 /* FOOTER */
 footer {
   background-color: #f9f0e0;
