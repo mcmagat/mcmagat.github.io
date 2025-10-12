@@ -283,3 +283,40 @@ footer {
   nav a { font-size: 1.2em; }
 }
 
+/* ====== CSS-Only Lightbox ====== */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* when targeted (clicked) */
+.lightbox:target {
+  display: flex;
+}
+
+/* close area (click outside to close) */
+.lightbox .close {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+  top: 0;
+  left: 0;
+}
+
