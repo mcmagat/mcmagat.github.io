@@ -40,6 +40,18 @@ nav a {
 nav a:hover {
   color: var(--text);
 }
+
+.logo h1 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0;
+}
+
+.logo p {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -56,17 +68,6 @@ nav {
 body {
   margin: 0;
   padding-top: 6%; /* adjust based on navbar height */
-}
-
-.logo h1 {
-  font-size: 1.5rem;
-  margin: 0.5rem 0 0;
-}
-
-.logo p {
-  font-style: italic;
-  font-size: 0.9rem;
-  margin: 0;
 }
 
 /* HERO SECTION */
