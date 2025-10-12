@@ -62,27 +62,33 @@ nav a:hover {
 
 /* HERO SECTION */
 .hero {
-  background: url("web_hero_bg.png") no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+ background: url("web hero bg.png") no-repeat center center;
+ background-size: cover;
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ color: var(--gold);
 }
+
 
 .hero h1 {
-  font-size: 4em;
-  font-style: italic;
-  margin-bottom: 0.3em;
-  color: var(--gold);
+ font-size: 4em; /* bigger title */
+ font-style: italic;
+ margin-bottom: 0.3em;
+ color: var(--gold);
+ letter-spacing: 1px;
 }
 
+
 .hero p {
-  font-size: 1.5em;
-  color: var(--text);
-  font-style: italic;
+ font-size: 1.5em; /* larger subtitle */
+ color: var(--text);
+ font-style: italic;
 }
+
 
 /* ABOUT */
 .about {
