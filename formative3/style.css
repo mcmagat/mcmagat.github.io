@@ -18,25 +18,29 @@ header {
   padding: 2rem 0 1rem;
 }
 
+/* NAVIGATION */
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 3rem;
-  padding: 0;
+  gap: 6%;
+  padding: 2% 0;
 }
 
 nav a {
-  color: var(--gold);
   text-decoration: none;
-  font-size: 1.1rem;
+  color: var(--gold);
   font-style: italic;
-  transition: color 0.3s;
+  font-weight: 600;
+  font-size: 1.5em; /* made larger */
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
   color: var(--text);
 }
+
 
 .logo h1 {
   font-size: 1.5rem;
@@ -75,60 +79,152 @@ nav a:hover {
 
 /* ABOUT */
 .about {
-  text-align: center;
-  padding: 5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 5% 10%;
+  flex-wrap: wrap; /* responsive for small screens */
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .about img {
-  width: 300px;
-  border-radius: 10px;
-  margin: 2rem 0;
+  width: 320px; /* medium size */
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
+
+.about p {
+  max-width: 600px;
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: var(--text);
+  font-style: italic;
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: var(--gold);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
 
 /* PROJECTS */
 .projects {
-  background-color: var(--cream);
-  text-align: center;
-  padding: 4rem 2rem;
+  padding: 5% 8%;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  color: var(--gold);
+  font-style: italic;
+  margin-bottom: 2rem;
 }
 
 .project-gallery {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap;
 }
 
-.project img {
-  width: 280px;
-  border-radius: 8px;
-  transition: transform 0.3s;
+.project-card {
+  width: 28%; /* slightly smaller */
+  background-color: #fdf3e6;
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-.project img:hover {
-  transform: scale(1.05);
+.project-card:hover {
+  transform: scale(1.03);
 }
+
+.project-card img {
+  width: 100%;
+  height: auto;
+}
+
+.project-card p {
+  margin: 1em;
+  font-size: 1rem; /* more readable */
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--text);
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .project-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 90%;
+  }
+
+  nav a {
+    font-size: 1.2em;
+  }
+}
+
 
 /* FOOTER */
 footer {
+  background-color: #f9f0e0;
   text-align: center;
-  padding: 2rem 0;
-  background-color: var(--light-cream);
-  font-size: 0.9rem;
+  padding: 3rem 1rem;
+  color: var(--text);
+}
+
+footer h2 {
+  color: var(--gold);
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .social-icons {
-  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-icons a {
+  text-decoration: none;
 }
 
 .social-icons i {
-  margin: 0 10px;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--text);
-  transition: transform 0.3s, color 0.3s;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons i:hover {
-  transform: scale(1.2);
   color: var(--gold);
+  transform: scale(1.2);
 }
+
+.footer-text {
+  font-size: 0.9rem;
+  color: var(--text);
+  opacity: 0.8;
+  margin-top: 1rem;
+}
+
