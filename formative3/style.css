@@ -10,12 +10,31 @@ body {
   font-family: "Georgia", serif;
   background-color: var(--light-cream);
   color: var(--text);
+  padding-top: 80px; /* offset for fixed navbar */
 }
 
 /* HEADER */
 header {
   text-align: center;
-  padding: 2rem 0 1rem;
+  padding: 1.5rem 0;
+  background-color: #fff7ed;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid #e8d7b8;
+}
+
+.logo h1 {
+  font-size: 1.6rem;
+  margin: 0.3rem 0 0;
+}
+
+.logo p {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--text);
 }
 
 /* NAVIGATION */
@@ -23,8 +42,9 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 6%;
-  padding: 2% 0;
+  gap: 5%;
+  padding: 0.5rem 0;
+  margin: 0;
 }
 
 nav a {
@@ -32,8 +52,7 @@ nav a {
   color: var(--gold);
   font-style: italic;
   font-weight: 600;
-  font-size: 1.5em; /* made larger */
-  letter-spacing: 1px;
+  font-size: 1.4em;
   transition: color 0.3s ease;
 }
 
@@ -41,58 +60,26 @@ nav a:hover {
   color: var(--text);
 }
 
-.logo h1 {
-  font-size: 1.5rem;
-  margin: 0.5rem 0 0;
-}
-
-.logo p {
-  font-style: italic;
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #FFF7ED; /* matches your soft muted gold / cream palette */
-  z-index: 1000;
-  padding: 1.2% 0;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-/* Push content down so it doesn't hide behind the fixed navbar */
-body {
-  margin: 0;
-  padding-top: 6%; /* adjust based on navbar height */
-}
-
 /* HERO SECTION */
 .hero {
-  background: url("web hero bg.png") no-repeat center center;
-  background-size: cover;
+  background: url("web_hero_bg.png") no-repeat center center/cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: var(--gold);
 }
 
 .hero h1 {
-  font-size: 4em; /* bigger title */
+  font-size: 4em;
   font-style: italic;
   margin-bottom: 0.3em;
   color: var(--gold);
-  letter-spacing: 1px;
 }
 
 .hero p {
-  font-size: 1.5em; /* larger subtitle */
+  font-size: 1.5em;
   color: var(--text);
   font-style: italic;
 }
@@ -104,20 +91,11 @@ body {
   justify-content: center;
   gap: 3rem;
   padding: 5% 10%;
-  flex-wrap: wrap; /* responsive for small screens */
-}
-
-.about-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
   flex-wrap: wrap;
 }
 
 .about img {
-  width: 320px; /* medium size */
-  height: auto;
+  width: 320px;
   border-radius: 15px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -128,28 +106,21 @@ body {
   text-align: justify;
   line-height: 1.8;
   font-size: 1.1rem;
-  color: var(--text);
   font-style: italic;
 }
 
-.about h2 {
+.about h2,
+.projects h2,
+footer h2 {
   font-size: 2rem;
   color: var(--gold);
   font-style: italic;
   margin-bottom: 1rem;
 }
 
-
 /* PROJECTS */
 .projects {
   padding: 5% 8%;
-}
-
-.projects h2 {
-  font-size: 2rem;
-  color: var(--gold);
-  font-style: italic;
-  margin-bottom: 2rem;
 }
 
 .project-gallery {
@@ -160,7 +131,7 @@ body {
 }
 
 .project-card {
-  width: 28%; /* slightly smaller */
+  width: 28%;
   background-color: #fdf3e6;
   border: 1px solid var(--gold);
   border-radius: 12px;
@@ -174,49 +145,21 @@ body {
 
 .project-card img {
   width: 100%;
-  height: auto;
+  display: block;
 }
 
 .project-card p {
   margin: 1em;
-  font-size: 1rem; /* more readable */
+  font-size: 1rem;
   line-height: 1.6;
   font-style: italic;
-  color: var(--text);
 }
-
-/* Responsive tweaks */
-@media (max-width: 1024px) {
-  .project-card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 768px) {
-  .project-card {
-    width: 90%;
-  }
-
-  nav a {
-    font-size: 1.2em;
-  }
-}
-
 
 /* FOOTER */
 footer {
   background-color: #f9f0e0;
   text-align: center;
   padding: 3rem 1rem;
-  color: var(--text);
-  font-family: "Playfair Display", serif;
-}
-
-footer h2 {
-  color: var(--gold);
-  font-style: italic;
-  font-size: 1.6rem;
-  margin-bottom: 1.5rem;
 }
 
 .social-icons {
@@ -240,15 +183,15 @@ footer h2 {
 
 .footer-text {
   font-size: 0.9rem;
-  color: var(--text);
   opacity: 0.8;
 }
 
+/* BACK TO TOP */
 .back-to-top {
   position: fixed;
   bottom: 3%;
   right: 2%;
-  background-color: #D4AF37; /* soft muted gold tone */
+  background-color: var(--gold);
   color: white;
   font-family: 'Georgia', serif;
   font-style: italic;
@@ -265,3 +208,12 @@ footer h2 {
   transform: scale(1.05);
 }
 
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .project-card { width: 45%; }
+}
+
+@media (max-width: 768px) {
+  .project-card { width: 90%; }
+  nav a { font-size: 1.2em; }
+}
