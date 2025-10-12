@@ -44,13 +44,17 @@ nav a:hover {
 
 /* HERO SECTION */
 #hero {
-  background: url("web hero bg.png") no-repeat bottom center/contain;
+  background: url("web hero bg.png") no-repeat center center;
+  background-size: cover;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
+  color: var(--gold);
 }
+
 
 .hero-text h1 {
   color: var(--gold);
