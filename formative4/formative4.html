@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Sign Up Form</h2>
+  <form id="signupForm">
+    <label>ID Number:
+      <input type="text" id="idNumber" required>
+    </label>
+    <label>First Name:
+      <input type="text" id="firstName" required>
+    </label>
+    <label>Middle Name:
+      <input type="text" id="middleName">
+    </label>
+    <label>Last Name:
+      <input type="text" id="lastName" required>
+    </label>
+    <label>Gender:
+      <select id="gender" required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Birthday:
+      <input type="date" id="birthday" required>
+    </label>
+    <button type="button" id="saveBtn">Save</button>
+  </form>
+
+  <h3>Submitted Data</h3>
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>ID Number</th>
+        <th>First Name</th>
+        <th>Middle Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Birthday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Data rows will be inserted here -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
