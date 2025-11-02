@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // only set background here — layout handled by CSS for reliable responsiveness
   document.body.style.background = 'linear-gradient(to right, #8ebdecff, #115098ff)';
   document.body.style.minHeight = '100vh';
 
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  // keep JS-driven fine-grain styles that don't conflict with layout
   const heading = container.querySelector('h2');
   heading.style.margin = '0 0 0.5rem 0';
   heading.style.fontSize = '1.5rem';
@@ -47,13 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Table basic styles — keep as a real table; scrolling handled by wrapper
   Object.assign(table.style, {
     width: '100%',
     borderCollapse: 'collapse',
-    display: 'table' // keep table semantics so columns align
+    display: 'table' 
   });
-  // let the .table-wrap handle scrolling (wrapper added in HTML/CSS)
+
+  // TABLEWRAP
   const tableWrap = table.closest('.table-wrap');
   if (tableWrap) {
     Object.assign(tableWrap.style, {
@@ -62,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Row hover using JS (keeps same behavior)
+  // Row hover
   table.addEventListener('mouseover', e => {
     const td = e.target.closest('td');
     if (td) td.parentElement.style.backgroundColor = '#f7fbff';
@@ -72,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (td) td.parentElement.style.backgroundColor = '';
   });
 
-  // Responsive tweaks that adjust only element-level styles (not core layout)
+  // Responsive screen size
   function applyResponsiveTweaks() {
     if (!container || !tableSection || !heading) return;
     if (window.innerWidth < 600) {

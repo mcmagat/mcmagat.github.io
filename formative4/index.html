@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Formative4 - Sign up</title>
   <style>
-    /* base + responsive layout */
     *, *::before, *::after { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; height: 100%; }
     body {
@@ -13,13 +12,13 @@
       background: linear-gradient(to right, #8ebdecff, #115098ff);
       min-height: 100vh;
       display: flex;
-      justify-content: center; /* center content horizontally */
+      justify-content: center; 
       padding: 2rem;
     }
 
     main {
       width: 100%;
-      max-width: 920px; /* allow larger viewport but center */
+      max-width: 920px; 
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -28,7 +27,7 @@
 
     .container, .table-section {
       width: 100%;
-      max-width: 520px; /* primary container width */
+      max-width: 520px; 
       background: #fff;
       border-radius: 10px;
       padding: 1.6rem;
@@ -36,7 +35,7 @@
     }
 
     .table-section {
-      max-width: 720px; /* table area wider if needed */
+      max-width: 720px; 
       padding: 1rem;
     }
 
@@ -66,8 +65,6 @@
       font-size: 1rem;
     }
 
-   /* ...existing CSS... */
-/* responsive table: wrapper + real table so columns align */
 .table-section .table-wrap {
   display: block;
   overflow-x: auto;
@@ -77,7 +74,7 @@
   width: 100%;
   border-collapse: collapse;
   display: table;
-  min-width: 600px; /* allow horizontal scroll on narrow viewports */
+  min-width: 600px; 
 }
 .table-section th,
 .table-section td {
@@ -90,8 +87,7 @@
   background: #e6f0ff;
   font-weight: 600;
 }
-/* ...existing CSS... */
-    /* Theme toggle button (positioned by JS) */
+
     #toggleTheme {
       position: fixed;
       z-index: 1000;
@@ -104,7 +100,6 @@
       cursor: pointer;
     }
 
-    /* small screens adjustments */
     @media (max-width: 600px) {
       body { padding: 1rem; }
       .container, .table-section { padding: 1rem; border-radius: 8px; }
@@ -149,7 +144,6 @@
       </form>
     </section>
 
-    <!-- ...existing code... -->
     <section class="table-section" aria-labelledby="data-title">
       <h3 id="data-title">Registered Users</h3>
       <div class="table-wrap" aria-hidden="false">
@@ -168,14 +162,10 @@
         </table>
       </div>
     </section>
-<!-- ...existing code... -->
-<!-- ...existing code... -->
   </main>
 
-  <!-- Theme toggle button (script styles this) -->
   <button id="toggleTheme" aria-pressed="false" aria-label="Toggle theme">Dark Mode</button>
 
-  <!-- load script at end so DOM is available; script already uses DOMContentLoaded as extra safety -->
   <script src="script.js"></script>
 </body>
 </html>
