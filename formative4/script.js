@@ -161,18 +161,23 @@ function updateTable() {
   });
 }
 
-// Create theme toggle logic
+// Style and position the theme toggle button
 const toggleButton = document.getElementById('toggleTheme');
 Object.assign(toggleButton.style, {
-  marginBottom: '1rem',
-  padding: '0.5rem 1rem',
+  position: 'fixed',
+  bottom: '20px',
+  right: '20px',
+  padding: '0.6rem 1rem',
   backgroundColor: '#ffffff',
   color: '#3a8dde',
   border: '2px solid #3a8dde',
   borderRadius: '5px',
   cursor: 'pointer',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  zIndex: '1000',
+  boxShadow: '0 2px 6px rgba(0,0,0,0.2)'
 });
+
 
 let darkMode = false;
 
