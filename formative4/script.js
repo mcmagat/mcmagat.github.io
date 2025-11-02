@@ -31,7 +31,7 @@ form.style.padding = '15px';
 form.style.borderRadius = '8px';
 form.style.boxShadow = '0 0 10px rgba(0,0,0,0.1)';
 form.style.marginBottom = '20px';
-form.style.maxWidth = '1900px'; // Wider form for laptop screens
+form.style.maxWidth = '5000px'; // Wider form for laptop screens
 form.style.margin = '0 auto';  // Center the form horizontally
 
 // 🎨 Labels and inputs
