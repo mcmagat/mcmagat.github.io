@@ -143,38 +143,73 @@ birthdayInput.addEventListener('blur', () => {
   }
 
   // 📊 Update Table
-  function updateTable() {
+function updateTable() {
+  const tableBody = document.querySelector('#dataTable tbody');
+  tableBody.innerHTML = '';
 
-userDataList.forEach(user => {
-  const row = document.createElement('tr');
-  row.style.opacity = '0';
-  row.style.transition = 'opacity 0.6s ease';
-
-  setTimeout(() => {
-    row.style.opacity = '1';
-  }, 50);
-
-  for (let key in user) {
-    const cell = document.createElement('td');
-    cell.textContent = user[key];
-    cell.style.padding = '10px';
-    cell.style.borderBottom = '1px solid #eee';
-    cell.style.color = '#333';
-    cell.style.transition = 'transform 0.3s ease';
-    cell.addEventListener('mouseover', () => cell.style.transform = 'scale(1.05)');
-    cell.addEventListener('mouseout', () => cell.style.transform = 'scale(1)');
-    row.appendChild(cell);
+  if (userDataList.length === 0) {
+    const emptyRow = document.createElement('tr');
+    const emptyCell = document.createElement('td');
+    emptyCell.colSpan = 6;
+    emptyCell.textContent = 'No data submitted yet';
+    emptyCell.style.textAlign = 'center';
+    emptyCell.style.color = '#888';
+    emptyCell.style.padding = '12px';
+    emptyRow.appendChild(emptyCell);
+    tableBody.appendChild(emptyRow);
+    return;
   }
 
-  row.addEventListener('mouseover', () => {
-    row.style.backgroundColor = '#eafaf1';
-  });
-  row.addEventListener('mouseout', () => {
-    row.style.backgroundColor = '';
+  userDataList.forEach(user => {
+    const row = document.createElement('tr');
+    row.style.opacity = '0';
+    row.style.transition = 'opacity 0.6s ease';
+
+    setTimeout(() => {
+      row.style.opacity = '1';
+    }, 50);
+
+    for (let key in user) {
+      const cell = document.createElement('td');
+      cell.textContent = user[key];
+      cell.style.padding = '10px';
+      cell.style.borderBottom = '1px solid #eee';
+      cell.style.color = '#333';
+      cell.style.transition = 'transform 0.3s ease';
+      cell.addEventListener('mouseover', () => cell.style.transform = 'scale(1.05)');
+      cell.addEventListener('mouseout', () => cell.style.transform = 'scale(1)');
+      row.appendChild(cell);
+    }
+
+    row.addEventListener('mouseover', () => {
+      row.style.backgroundColor = '#eafaf1';
+    });
+    row.addEventListener('mouseout', () => {
+      row.style.backgroundColor = '';
+    });
+
+    tableBody.appendChild(row);
   });
 
-  tableBody.appendChild(row);
-});
+  const table = document.getElementById('dataTable');
+  table.style.width = '100%';
+  table.style.borderCollapse = 'collapse';
+  table.style.marginTop = '30px';
+  table.style.backgroundColor = '#ffffff';
+  table.style.border = '2px solid #2ecc71';
+  table.style.borderRadius = '8px';
+  table.style.overflow = 'hidden';
+
+  const headers = table.querySelectorAll('th');
+  headers.forEach(th => {
+    th.style.backgroundColor = '#1e3c72';
+    th.style.color = '#fff';
+    th.style.padding = '12px';
+    th.style.fontSize = '16px';
+    th.style.borderBottom = '1px solid #ccc';
+  });
+}
+
 
 
 
