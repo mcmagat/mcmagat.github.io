@@ -12,10 +12,10 @@ const container = document.querySelector('.container');
 Object.assign(container.style, {
  background: 'white',
  padding: '2rem',
- borderRadius: '5%',
+ borderRadius: '10px',
  boxShadow: '0 0 20px rgba(0,0,0,0.1)',
  width: '100%',
- maxWidth: 'max-content'
+ maxWidth: '400px'
 });
 
 
@@ -87,23 +87,34 @@ tableHeading.style.textAlign = 'center';
 // Style table
 const table = document.getElementById('dataTable');
 table.style.width = '100%';
+table.style.maxWidth = '100%';
 table.style.borderCollapse = 'collapse';
+table.style.boxSizing = 'border-box';
+table.style.overflowX = 'auto';
+table.style.display = 'block'; // allows horizontal scroll on small screens
+
 
 
 const ths = table.querySelectorAll('th');
 ths.forEach(th => {
- th.style.border = '1px solid #ccc';
- th.style.padding = '0.5rem';
- th.style.textAlign = 'center';
- th.style.backgroundColor = '#e6f0ff';
+th.style.border = '1px solid #ccc';
+  th.style.padding = '0.5rem';
+  th.style.textAlign = 'left';
+  th.style.backgroundColor = '#e6f0ff';
+  th.style.color = darkMode ? '#2a0b3eff' : '#000000ff';
+  th.style.wordWrap = 'break-word';
+  th.style.fontSize = '0.9rem';
 });
 
 
 const tds = table.querySelectorAll('td');
 tds.forEach(td => {
- td.style.border = '1px solid #ccc';
- td.style.padding = '0.5rem';
- td.style.textAlign = 'center';
+  td.style.border = '1px solid #ccc';
+  td.style.padding = '0.5rem';
+  td.style.textAlign = 'left';
+  td.style.color = darkMode ? '#f9f9f9ff' : '#000000ff';
+  td.style.wordWrap = 'break-word';
+  td.style.fontSize = '0.9rem';
 });
 
 
