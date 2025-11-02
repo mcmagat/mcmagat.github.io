@@ -189,7 +189,7 @@ toggleButton.addEventListener('click', () => {
     heading.style.color = '#ffffff';
     tableHeading.style.color = '#ffffff';
     labels.forEach(label => label.style.color = '#ffffff');
-    inputs.forEach(input => input.style.backgroundColor = '#444');
+    inputs.forEach(input => input.style.backgroundColor = '#f8f8f8ff');
     button.style.backgroundColor = '#555';
     button.style.color = '#fff';
     toggleButton.textContent = 'Light Mode';
