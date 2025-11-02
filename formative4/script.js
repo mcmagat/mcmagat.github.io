@@ -1,25 +1,27 @@
 window.addEventListener('DOMContentLoaded', () => {
   const userDataList = [];
 
-  // 🌈 Base styles
+  // 🌈 Gradient background
+  document.body.style.background = 'linear-gradient(to right, #6a11cb, #2575fc)';
   document.body.style.fontFamily = 'Arial, sans-serif';
   document.body.style.padding = '20px';
-  document.body.style.margin = '32px';
-  document.body.style.backgroundColor = '#e6f2ff';
+  document.body.style.margin = '0';
   document.body.style.transition = 'background-color 0.5s ease, color 0.5s ease';
 
   // 🎯 Headings
   const heading2 = document.querySelector('h2');
-  heading2.style.color = '#005b96';
+  heading2.style.color = '#ffffff';
   heading2.style.fontSize = '32px';
+  heading2.style.textAlign = 'center';
+  heading2.style.marginBottom = '20px';
   heading2.style.transition = 'transform 0.3s ease';
   heading2.addEventListener('mouseover', () => heading2.style.transform = 'scale(1.05)');
   heading2.addEventListener('mouseout', () => heading2.style.transform = 'scale(1)');
 
   const heading3 = document.querySelector('h3');
-  heading3.style.color = '#0074d9';
+  heading3.style.color = '#ffffff';
   heading3.style.fontSize = '24px';
-  heading3.style.marginTop = '30px';
+  heading3.style.marginTop = '40px';
   heading3.style.transition = 'transform 0.3s ease';
   heading3.addEventListener('mouseover', () => heading3.style.transform = 'scale(1.05)');
   heading3.addEventListener('mouseout', () => heading3.style.transform = 'scale(1)');
@@ -27,11 +29,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // 🧾 Form styling
   const form = document.getElementById('signupForm');
   form.style.backgroundColor = '#ffffff';
-  form.style.padding = '20px';
-  form.style.borderRadius = '10px';
-  form.style.boxShadow = '0 0 10px rgba(0,0,0,0.1)';
-  form.style.marginBottom = '20px';
-  form.style.maxWidth = '800px';
+  form.style.borderRadius = '12px';
+  form.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
+  form.style.padding = '30px';
+  form.style.maxWidth = '500px';
   form.style.margin = '0 auto';
 
   // 🏷️ Labels and Inputs
@@ -39,76 +40,81 @@ window.addEventListener('DOMContentLoaded', () => {
   labels.forEach(label => {
     label.style.display = 'block';
     label.style.marginTop = '10px';
-    label.style.color = '#003366';
-    label.style.fontSize = '18px';
-    label.style.transition = 'transform 0.3s ease';
-    label.addEventListener('mouseover', () => label.style.transform = 'scale(1.05)');
-    label.addEventListener('mouseout', () => label.style.transform = 'scale(1)');
+    label.style.color = '#333';
+    label.style.fontSize = '16px';
   });
 
   const inputs = form.querySelectorAll('input, select');
   inputs.forEach(input => {
-    input.style.padding = '10px';
-    input.style.marginTop = '5px';
+    input.style.border = '1px solid #ccc';
+    input.style.borderRadius = '6px';
+    input.style.padding = '12px';
+    input.style.marginTop = '8px';
     input.style.width = '100%';
-    input.style.border = '1px solid #99ccff';
-    input.style.borderRadius = '4px';
     input.style.fontSize = '16px';
-    input.style.backgroundColor = '#f0f8ff';
-    input.style.transition = 'background-color 0.3s ease, transform 0.3s ease';
+    input.style.backgroundColor = '#f9f9f9';
+    input.style.transition = 'box-shadow 0.3s ease';
 
     input.addEventListener('focus', () => {
-      input.style.backgroundColor = '#d6eaff';
-      input.style.transform = 'scale(1.02)';
+      input.style.boxShadow = '0 0 5px rgba(106,17,203,0.5)';
     });
     input.addEventListener('blur', () => {
-      input.style.backgroundColor = '#f0f8ff';
-      input.style.transform = 'scale(1)';
+      input.style.boxShadow = 'none';
     });
   });
 
   // 💾 Save Button
   const saveBtn = document.getElementById('saveBtn');
-  saveBtn.style.marginTop = '15px';
-  saveBtn.style.padding = '10px 20px';
-  saveBtn.style.backgroundColor = '#3399ff';
-  saveBtn.style.color = 'white';
+  saveBtn.style.backgroundColor = '#2575fc';
+  saveBtn.style.color = '#fff';
   saveBtn.style.border = 'none';
-  saveBtn.style.borderRadius = '4px';
+  saveBtn.style.borderRadius = '6px';
+  saveBtn.style.padding = '12px 20px';
+  saveBtn.style.marginTop = '20px';
   saveBtn.style.cursor = 'pointer';
   saveBtn.style.fontSize = '16px';
-  saveBtn.style.transition = 'transform 0.3s ease, background-color 0.3s ease';
+  saveBtn.style.transition = 'background-color 0.3s ease, transform 0.3s ease';
 
   saveBtn.addEventListener('mouseover', () => {
-    saveBtn.style.backgroundColor = '#0074d9';
+    saveBtn.style.backgroundColor = '#6a11cb';
     saveBtn.style.transform = 'scale(1.05)';
   });
   saveBtn.addEventListener('mouseout', () => {
-    saveBtn.style.backgroundColor = '#3399ff';
+    saveBtn.style.backgroundColor = '#2575fc';
     saveBtn.style.transform = 'scale(1)';
   });
 
   // 🌙 Toggle Theme Button
   const toggleBtn = document.getElementById('toggleThemeBtn');
-  toggleBtn.style.margin = '10px 0';
-  toggleBtn.style.padding = '10px 20px';
-  toggleBtn.style.borderRadius = '4px';
-  toggleBtn.style.border = 'none';
-  toggleBtn.style.cursor = 'pointer';
-  toggleBtn.style.backgroundColor = '#005b96';
+  toggleBtn.style.backgroundColor = '#2575fc';
   toggleBtn.style.color = '#fff';
+  toggleBtn.style.border = 'none';
+  toggleBtn.style.borderRadius = '6px';
+  toggleBtn.style.padding = '12px 20px';
+  toggleBtn.style.margin = '20px auto';
+  toggleBtn.style.display = 'block';
+  toggleBtn.style.cursor = 'pointer';
   toggleBtn.style.fontSize = '16px';
-  toggleBtn.style.transition = 'transform 0.3s ease';
+  toggleBtn.style.transition = 'background-color 0.3s ease, transform 0.3s ease';
 
-  toggleBtn.addEventListener('mouseover', () => toggleBtn.style.transform = 'scale(1.05)');
-  toggleBtn.addEventListener('mouseout', () => toggleBtn.style.transform = 'scale(1)');
+  toggleBtn.addEventListener('mouseover', () => {
+    toggleBtn.style.backgroundColor = '#6a11cb';
+    toggleBtn.style.transform = 'scale(1.05)';
+  });
+  toggleBtn.addEventListener('mouseout', () => {
+    toggleBtn.style.backgroundColor = '#2575fc';
+    toggleBtn.style.transform = 'scale(1)';
+  });
+
   toggleBtn.addEventListener('click', () => {
     const isDark = document.body.style.backgroundColor === 'rgb(30, 30, 30)';
-    document.body.style.backgroundColor = isDark ? '#e6f2ff' : '#1e1e1e';
+    document.body.style.background = isDark
+      ? 'linear-gradient(to right, #6a11cb, #2575fc)'
+      : '#1e1e1e';
     document.body.style.color = isDark ? '#000' : '#f0f0f0';
     form.style.backgroundColor = isDark ? '#ffffff' : '#2c2c2c';
-    heading2.style.color = isDark ? '#005b96' : '#66ccff';
-    heading3.style.color = isDark ? '#0074d9' : '#66ccff';
+    heading2.style.color = isDark ? '#ffffff' : '#66ccff';
+    heading3.style.color = isDark ? '#ffffff' : '#66ccff';
   });
 
   // 📥 Collect Form Data
@@ -143,9 +149,8 @@ window.addEventListener('DOMContentLoaded', () => {
         const cell = document.createElement('td');
         cell.textContent = user[key];
         cell.style.padding = '10px';
-        cell.style.border = '1px solid #3399ff';
-        cell.style.fontSize = '16px';
-        cell.style.color = '#003366';
+        cell.style.borderBottom = '1px solid #eee';
+        cell.style.color = '#333';
         cell.style.transition = 'transform 0.3s ease';
         cell.addEventListener('mouseover', () => cell.style.transform = 'scale(1.05)');
         cell.addEventListener('mouseout', () => cell.style.transform = 'scale(1)');
@@ -153,7 +158,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
 
       row.addEventListener('mouseover', () => {
-        row.style.backgroundColor = '#d6eaff';
+        row.style.backgroundColor = '#f0f8ff';
       });
       row.addEventListener('mouseout', () => {
         row.style.backgroundColor = '';
@@ -165,21 +170,19 @@ window.addEventListener('DOMContentLoaded', () => {
     const table = document.getElementById('dataTable');
     table.style.width = '100%';
     table.style.borderCollapse = 'collapse';
+    table.style.marginTop = '30px';
     table.style.backgroundColor = '#ffffff';
-    table.style.marginTop = '20px';
-    table.style.border = '2px solid #3399ff';
+    table.style.border = '2px solid #2575fc';
+    table.style.borderRadius = '8px';
+    table.style.overflow = 'hidden';
 
     const headers = table.querySelectorAll('th');
     headers.forEach(th => {
+      th.style.backgroundColor = '#6a11cb';
+      th.style.color = '#fff';
       th.style.padding = '12px';
-      th.style.border = '1px solid #3399ff';
-      th.style.textAlign = 'left';
-      th.style.fontSize = '18px';
-      th.style.color = '#005b96';
-      th.style.backgroundColor = '#cce6ff';
-      th.style.transition = 'transform 0.3s ease';
-      th.addEventListener('mouseover', () => th.style.transform = 'scale(1.05)');
-      th.addEventListener('mouseout', () => th.style.transform = 'scale(1)');
+      th.style.fontSize = '16px';
+      th.style.borderBottom = '1px solid #ccc';
     });
   }
 
