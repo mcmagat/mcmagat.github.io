@@ -1,3 +1,4 @@
+// Base layout styling
 document.body.style.fontFamily = 'Segoe UI, sans-serif';
 document.body.style.background = 'linear-gradient(to right, #8ebdecff, #115098ff)';
 document.body.style.margin = '0';
@@ -5,22 +6,40 @@ document.body.style.padding = '2rem';
 document.body.style.display = 'flex';
 document.body.style.flexDirection = 'column';
 document.body.style.alignItems = 'center';
+document.body.style.flexWrap = 'wrap';
+document.body.style.justifyContent = 'center';
+document.body.style.fontSize = '1rem';
+
+// Responsive tweaks
+function applyResponsiveTweaks() {
+  if (window.innerWidth < 500) {
+    container.style.padding = '1rem';
+    tableSection.style.padding = '1rem';
+    heading.style.fontSize = '1.2rem';
+  } else {
+    container.style.padding = '2rem';
+    tableSection.style.padding = '2rem';
+    heading.style.fontSize = '1.5rem';
+  }
+}
+window.addEventListener('resize', applyResponsiveTweaks);
 
 // Style container
 const container = document.querySelector('.container');
 Object.assign(container.style, {
   background: 'white',
-  padding: '2rem',
   borderRadius: '10px',
   boxShadow: '0 0 20px rgba(0,0,0,0.1)',
-  width: '100%',
-  maxWidth: '400px'
+  width: '90%',
+  maxWidth: '400px',
+  boxSizing: 'border-box'
 });
 
 // Style heading
 const heading = container.querySelector('h2');
 heading.style.textAlign = 'center';
 heading.style.color = '#3a8dde';
+heading.style.fontSize = '1.5rem';
 
 // Style labels and inputs
 const labels = container.querySelectorAll('label');
@@ -28,15 +47,18 @@ labels.forEach(label => {
   label.style.display = 'block';
   label.style.marginTop = '1rem';
   label.style.fontWeight = 'bold';
+  label.style.fontSize = '1rem';
 });
 
 const inputs = container.querySelectorAll('input, select');
 inputs.forEach(input => {
   input.style.width = '100%';
+  input.style.maxWidth = '100%';
   input.style.padding = '0.5rem';
   input.style.marginTop = '0.3rem';
   input.style.border = '1px solid #ccc';
   input.style.borderRadius = '5px';
+  input.style.boxSizing = 'border-box';
 });
 
 // Style button
@@ -50,7 +72,8 @@ Object.assign(button.style, {
   border: 'none',
   borderRadius: '5px',
   cursor: 'pointer',
-  transition: 'background-color 0.3s ease'
+  transition: 'background-color 0.3s ease',
+  fontSize: '1rem'
 });
 button.addEventListener('mouseover', () => {
   button.style.backgroundColor = '#2f76c3';
@@ -64,22 +87,25 @@ const tableSection = document.querySelector('.table-section');
 Object.assign(tableSection.style, {
   background: 'white',
   marginTop: '3rem',
-  padding: '2rem',
   borderRadius: '10px',
   boxShadow: '0 0 15px rgba(0,0,0,0.05)',
-  width: '100%',
-  maxWidth: '800px'
+  width: '95%',
+  maxWidth: '800px',
+  boxSizing: 'border-box'
 });
 
 const tableHeading = tableSection.querySelector('h3');
 tableHeading.style.color = '#3a8dde';
 tableHeading.style.marginBottom = '1rem';
 tableHeading.style.textAlign = 'center';
+tableHeading.style.fontSize = '1.2rem';
 
 // Style table
 const table = document.getElementById('dataTable');
 table.style.width = '100%';
+table.style.maxWidth = '100%';
 table.style.borderCollapse = 'collapse';
+table.style.boxSizing = 'border-box';
 
 const ths = table.querySelectorAll('th');
 ths.forEach(th => {
@@ -87,6 +113,7 @@ ths.forEach(th => {
   th.style.padding = '0.5rem';
   th.style.textAlign = 'center';
   th.style.backgroundColor = '#e6f0ff';
+  th.style.color = '#000000ff';
 });
 
 const tds = table.querySelectorAll('td');
@@ -94,6 +121,7 @@ tds.forEach(td => {
   td.style.border = '1px solid #ccc';
   td.style.padding = '0.5rem';
   td.style.textAlign = 'center';
+  td.style.color = '#000000ff';
 });
 
 // Hover effect for rows
@@ -157,9 +185,11 @@ function updateTable() {
     td.style.border = '1px solid #ccc';
     td.style.padding = '0.5rem';
     td.style.textAlign = 'center';
+    td.style.color = darkMode ? '#f9f9f9ff' : '#000000ff';
   });
 }
 
+// Theme toggle button
 const toggleButton = document.getElementById('toggleTheme');
 Object.assign(toggleButton.style, {
   position: 'fixed',
@@ -173,9 +203,10 @@ Object.assign(toggleButton.style, {
   cursor: 'pointer',
   fontWeight: 'bold',
   zIndex: '1000',
-  boxShadow: '0 2px 6px rgba(0,0,0,0.2)'
+  boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
+  fontSize: '0.9rem'
 });
-
+toggleButton.title = "Switch between light and dark themes";
 
 let darkMode = false;
 
@@ -195,6 +226,11 @@ toggleButton.addEventListener('click', () => {
     toggleButton.textContent = 'Light Mode';
     toggleButton.style.backgroundColor = '#3a8dde';
     toggleButton.style.color = '#ffffff';
+
+    const ths = table.querySelectorAll('th');
+    const tds = table.querySelectorAll('td');
+    ths.forEach(th => th.style.color = '#2a0b3eff');
+    tds.forEach(td => td.style.color = '#f9f9f9ff');
   } else {
     document.body.style.background = 'linear-gradient(to right, #3a8dde, #6fb1fc)';
     container.style.background = 'white';
@@ -208,18 +244,11 @@ toggleButton.addEventListener('click', () => {
     toggleButton.textContent = 'Dark Mode';
     toggleButton.style.backgroundColor = '#ffffff';
     toggleButton.style.color = '#3a8dde';
+
+    const ths = table.querySelectorAll('th');
+    const tds = table.querySelectorAll('td');
+    ths.forEach(th => th.style.color = '#000000ff');
+    tds.forEach(td => td.style.color = '#000000ff');
   }
-if (darkMode) {
-  // ... existing dark mode styles
-  const ths = table.querySelectorAll('th');
-  const tds = table.querySelectorAll('td');
-  ths.forEach(th => th.style.color = '#2a0b3eff');
-  tds.forEach(td => td.style.color = '#f9f9f9ff');
-} else {
-  // ... existing light mode styles
-  const ths = table.querySelectorAll('th');
-  const tds = table.querySelectorAll('td');
-  ths.forEach(th => th.style.color = '#000000ff');
-  tds.forEach(td => td.style.color = '#000000ff');
-}
-});
+
+  updateTable(); // re
