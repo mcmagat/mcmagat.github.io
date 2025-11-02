@@ -6,17 +6,39 @@ document.body.style.display = 'flex';
 document.body.style.flexDirection = 'column';
 document.body.style.alignItems = 'center';
 
+document.body.style.fontSize = '1rem'; // base size
+heading.style.fontSize = '1.5rem';
+tableHeading.style.fontSize = '1.2rem';
+labels.forEach(label => label.style.fontSize = '1rem');
+button.style.fontSize = '1rem';
+toggleButton.style.fontSize = '0.9rem';
+
+document.body.style.flexWrap = 'wrap';
+document.body.style.justifyContent = 'center';
 
 // Style container
 const container = document.querySelector('.container');
 Object.assign(container.style, {
- background: 'white',
- padding: '2rem',
- borderRadius: '10px',
- boxShadow: '0 0 20px rgba(0,0,0,0.1)',
- width: '100%',
- maxWidth: '400px'
+  background: 'white',
+  padding: '2rem',
+  borderRadius: '10px',
+  boxShadow: '0 0 20px rgba(0,0,0,0.1)',
+  width: '90%',
+  maxWidth: '400px',
+  boxSizing: 'border-box'
 });
+
+Object.assign(tableSection.style, {
+  background: 'white',
+  marginTop: '3rem',
+  padding: '2rem',
+  borderRadius: '10px',
+  boxShadow: '0 0 15px rgba(0,0,0,0.05)',
+  width: '95%',
+  maxWidth: '800px',
+  boxSizing: 'border-box'
+});
+
 
 
 // Style heading
@@ -37,6 +59,8 @@ labels.forEach(label => {
 const inputs = container.querySelectorAll('input, select');
 inputs.forEach(input => {
  input.style.width = '100%';
+ input.style.maxWidth = '100%';
+ input.style.boxSizing = 'border-box';
  input.style.padding = '0.5rem';
  input.style.marginTop = '0.3rem';
  input.style.border = '1px solid #ccc';
@@ -87,6 +111,8 @@ tableHeading.style.textAlign = 'center';
 // Style table
 const table = document.getElementById('dataTable');
 table.style.width = '100%';
+table.style.maxWidth = '100%';
+table.style.boxSizing = 'border-box';
 table.style.borderCollapse = 'collapse';
 
 
