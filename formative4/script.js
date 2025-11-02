@@ -4,6 +4,7 @@ const userDataList = [];
 // ✅ Apply base styles with light blue palette
 document.body.style.fontFamily = 'Arial, sans-serif';
 document.body.style.padding = '20px';
+document.body.style.margin = '40px';
 document.body.style.backgroundColor = '#e6f2ff';
 document.body.style.transition = 'background-color 0.5s ease';
 
@@ -18,6 +19,7 @@ heading2.addEventListener('mouseout', () => heading2.style.transform = 'scale(1)
 const heading3 = document.querySelector('h3');
 heading3.style.color = '#0074d9';
 heading3.style.fontSize = '24px';
+heading3.style.marginTop = '30px';
 heading3.style.transition = 'transform 0.3s ease';
 heading3.addEventListener('mouseover', () => heading3.style.transform = 'scale(1.05)');
 heading3.addEventListener('mouseout', () => heading3.style.transform = 'scale(1)');
@@ -29,6 +31,8 @@ form.style.padding = '15px';
 form.style.borderRadius = '8px';
 form.style.boxShadow = '0 0 10px rgba(0,0,0,0.1)';
 form.style.marginBottom = '20px';
+form.style.maxWidth = '600px';
+form.style.margin = '0 auto';
 
 // 🎨 Labels and inputs
 const labels = form.querySelectorAll('label');
@@ -136,7 +140,7 @@ function updateTable() {
       const cell = document.createElement('td');
       cell.textContent = user[key];
       cell.style.padding = '10px';
-      cell.style.border = '1px solid #99ccff';
+      cell.style.border = '1px solid #3399ff';
       cell.style.fontSize = '16px';
       cell.style.color = '#003366';
       cell.style.transition = 'transform 0.3s ease';
@@ -159,14 +163,17 @@ function updateTable() {
   table.style.width = '100%';
   table.style.borderCollapse = 'collapse';
   table.style.backgroundColor = '#ffffff';
+  table.style.marginTop = '20px';
+  table.style.border = '2px solid #3399ff';
 
   const headers = table.querySelectorAll('th');
   headers.forEach(th => {
-    th.style.padding = '10px';
-    th.style.border = '1px solid #99ccff';
+    th.style.padding = '12px';
+    th.style.border = '1px solid #3399ff';
     th.style.textAlign = 'left';
     th.style.fontSize = '18px';
     th.style.color = '#005b96';
+    th.style.backgroundColor = '#cce6ff';
     th.style.transition = 'transform 0.3s ease';
     th.addEventListener('mouseover', () => th.style.transform = 'scale(1.05)');
     th.addEventListener('mouseout', () => th.style.transform = 'scale(1)');
