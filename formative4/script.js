@@ -11,7 +11,7 @@ document.body.style.transition = 'background-color 0.5s ease';
 // 🎨 Headings
 const heading2 = document.querySelector('h2');
 heading2.style.color = '#005b96';
-heading2.style.fontSize = '72px';
+heading2.style.fontSize = '100px';
 heading2.style.transition = 'transform 0.3s ease';
 heading2.addEventListener('mouseover', () => heading2.style.transform = 'scale(1.05)');
 heading2.addEventListener('mouseout', () => heading2.style.transform = 'scale(1)');
