@@ -15,6 +15,23 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.style.opacity = '1';
   }, 100);
 
+  // ✅ Success message element
+  const successMessage = document.createElement('div');
+  successMessage.textContent = '✅ Data saved successfully!';
+  successMessage.style.position = 'relative';
+  successMessage.style.textAlign = 'center';
+  successMessage.style.marginTop = '20px';
+  successMessage.style.fontSize = '18px';
+  successMessage.style.color = '#ffffff';
+  successMessage.style.backgroundColor = '#28a745';
+  successMessage.style.padding = '10px 20px';
+  successMessage.style.borderRadius = '8px';
+  successMessage.style.opacity = '0';
+  successMessage.style.transition = 'opacity 0.5s ease, transform 0.3s ease';
+  successMessage.style.maxWidth = '300px';
+  successMessage.style.margin = '20px auto';
+  document.body.appendChild(successMessage);
+
   // 🎯 Headings
   const heading2 = document.querySelector('h2');
   heading2.style.color = '#ffffff';
@@ -22,7 +39,6 @@ window.addEventListener('DOMContentLoaded', () => {
   heading2.style.textAlign = 'center';
   heading2.style.marginBottom = '20px';
   heading2.style.transition = 'transform 0.3s ease';
-
   heading2.addEventListener('mouseover', () => heading2.style.transform = 'scale(1.05)');
   heading2.addEventListener('mouseout', () => heading2.style.transform = 'scale(1)');
 
@@ -31,7 +47,6 @@ window.addEventListener('DOMContentLoaded', () => {
   heading3.style.fontSize = '24px';
   heading3.style.marginTop = '40px';
   heading3.style.transition = 'transform 0.3s ease';
-
   heading3.addEventListener('mouseover', () => heading3.style.transform = 'scale(1.05)');
   heading3.addEventListener('mouseout', () => heading3.style.transform = 'scale(1)');
 
@@ -118,6 +133,16 @@ window.addEventListener('DOMContentLoaded', () => {
     userDataList.push(newUser);
     updateTable();
     form.reset();
+
+    // ✅ Show success message
+    successMessage.style.opacity = '1';
+    successMessage.style.transform = 'scale(0.9)';
+    setTimeout(() => {
+      successMessage.style.transform = 'scale(1)';
+    }, 100);
+    setTimeout(() => {
+      successMessage.style.opacity = '0';
+    }, 3000);
   }
 
   // 📊 Update Table
@@ -169,9 +194,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 🧠 Save Button Listener
-  saveBtn.addEventListener('click', saveData);
-
   // 🎨 Button Styling Function
   function styleButton(btn) {
     btn.style.backgroundColor = '#2575fc';
@@ -193,16 +215,4 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 📱 Responsive tweaks
-  window.addEventListener('resize', () => {
-    if (window.innerWidth < 600) {
-      form.style.padding = '20px';
-      heading2.style.fontSize = '24px';
-      heading3.style.fontSize = '20px';
-    } else {
-      form.style.padding = '30px';
-      heading2.style.fontSize = '32px';
-      heading3.style.fontSize = '24px';
-    }
-  });
-});
+  // 📱 Responsive
