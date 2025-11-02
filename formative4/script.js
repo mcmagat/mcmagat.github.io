@@ -79,27 +79,13 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 🎯 Birthday input styling
   const birthdayInput = document.getElementById('birthday');
-birthdayInput.type = 'date';
-birthdayInput.style.color = '#333';
-birthdayInput.style.backgroundColor = '#ffffff'; // white background
-birthdayInput.style.border = '1px solid #ccc';
-birthdayInput.style.borderRadius = '6px';
-birthdayInput.style.padding = '12px';
-birthdayInput.style.marginTop = '8px';
-birthdayInput.style.width = '100%';
-birthdayInput.style.fontSize = '16px';
-birthdayInput.style.transition = 'box-shadow 0.3s ease, transform 0.3s ease';
-
-birthdayInput.addEventListener('focus', () => {
-  birthdayInput.style.boxShadow = '0 0 8px rgba(46,204,113,0.5)';
-  birthdayInput.style.transform = 'scale(1.02)';
-});
-birthdayInput.addEventListener('blur', () => {
-  birthdayInput.style.boxShadow = 'none';
-  birthdayInput.style.transform = 'scale(1)';
-});
-
+  birthdayInput.type = 'date';
+  birthdayInput.style.color = '#333';
+  birthdayInput.style.backgroundColor = '#eafaf1';
+  birthdayInput.style.border = '1px solid #2ecc71';
+  birthdayInput.style.borderRadius = '6px';
 
   // 💾 Save Button
   const saveBtn = document.getElementById('saveBtn');
@@ -196,29 +182,24 @@ birthdayInput.addEventListener('blur', () => {
 
   // 🎨 Button Styling Function
   function styleButton(btn) {
-  function styleButton(btn) {
-  btn.style.backgroundColor = '#2a9d8f';
-  btn.style.color = '#fff';
-  btn.style.border = 'none';
-  btn.style.borderRadius = '6px';
-  btn.style.padding = '12px 20px';
-  btn.style.cursor = 'pointer';
-  btn.style.fontSize = '16px';
-  btn.style.transition = 'background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease';
-
-  btn.addEventListener('mouseover', () => {
-    btn.style.backgroundColor = '#1e3c72';
-    btn.style.transform = 'scale(1.05)';
-    btn.style.boxShadow = '0 0 10px rgba(42, 157, 143, 0.6)'; // 💡 glow effect
-  });
-
-  btn.addEventListener('mouseout', () => {
     btn.style.backgroundColor = '#2a9d8f';
-    btn.style.transform = 'scale(1)';
-    btn.style.boxShadow = 'none';
-  });
-}
+    btn.style.color = '#fff';
+    btn.style.border = 'none';
+    btn.style.borderRadius = '6px';
+    btn.style.padding = '12px 20px';
+    btn.style.cursor = 'pointer';
+    btn.style.fontSize = '16px';
+    btn.style.transition = 'background-color 0.3s ease, transform 0.3s ease';
 
+    btn.addEventListener('mouseover', () => {
+      btn.style.backgroundColor = '#1e3c72';
+      btn.style.transform = 'scale(1.05)';
+    });
+    btn.addEventListener('mouseout', () => {
+      btn.style.backgroundColor = '#2a9d8f';
+      btn.style.transform = 'scale(1)';
+    });
+  }
 
   // 📱 Responsive tweaks
   window.addEventListener('resize', () => {
