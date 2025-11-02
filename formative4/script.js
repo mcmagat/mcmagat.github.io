@@ -196,24 +196,28 @@ birthdayInput.addEventListener('blur', () => {
 
   // 🎨 Button Styling Function
   function styleButton(btn) {
-    btn.style.backgroundColor = '#2a9d8f';
-    btn.style.color = '#fff';
-    btn.style.border = 'none';
-    btn.style.borderRadius = '6px';
-    btn.style.padding = '12px 20px';
-    btn.style.cursor = 'pointer';
-    btn.style.fontSize = '16px';
-    btn.style.transition = 'background-color 0.3s ease, transform 0.3s ease';
+  btn.style.backgroundColor = '#2a9d8f';
+  btn.style.color = '#fff';
+  btn.style.border = 'none';
+  btn.style.borderRadius = '6px';
+  btn.style.padding = '12px 20px';
+  btn.style.cursor = 'pointer';
+  btn.style.fontSize = '16px';
+  btn.style.transition = 'background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease';
 
-    btn.addEventListener('mouseover', () => {
-      btn.style.backgroundColor = '#1e3c72';
-      btn.style.transform = 'scale(1.05)';
-    });
-    btn.addEventListener('mouseout', () => {
-      btn.style.backgroundColor = '#2a9d8f';
-      btn.style.transform = 'scale(1)';
-    });
-  }
+  btn.addEventListener('mouseover', () => {
+    btn.style.backgroundColor = '#1e3c72';
+    btn.style.transform = 'scale(1.05)';
+    btn.style.boxShadow = '0 0 10px rgba(42, 157, 143, 0.6)'; // 💡 glow effect
+  });
+
+  btn.addEventListener('mouseout', () => {
+    btn.style.backgroundColor = '#2a9d8f';
+    btn.style.transform = 'scale(1)';
+    btn.style.boxShadow = 'none';
+  });
+}
+
 
   // 📱 Responsive tweaks
   window.addEventListener('resize', () => {
