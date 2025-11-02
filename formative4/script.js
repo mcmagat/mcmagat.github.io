@@ -1,4 +1,3 @@
-// Apply styling via JavaScript
 document.body.style.fontFamily = 'Segoe UI, sans-serif';
 document.body.style.background = 'linear-gradient(to right, #3a8dde, #6fb1fc)';
 document.body.style.margin = '0';
@@ -161,3 +160,50 @@ function updateTable() {
     td.style.textAlign = 'center';
   });
 }
+
+// Create theme toggle logic
+const toggleButton = document.getElementById('toggleTheme');
+Object.assign(toggleButton.style, {
+  marginBottom: '1rem',
+  padding: '0.5rem 1rem',
+  backgroundColor: '#ffffff',
+  color: '#3a8dde',
+  border: '2px solid #3a8dde',
+  borderRadius: '5px',
+  cursor: 'pointer',
+  fontWeight: 'bold'
+});
+
+let darkMode = false;
+
+toggleButton.addEventListener('click', () => {
+  darkMode = !darkMode;
+
+  if (darkMode) {
+    document.body.style.background = '#1e1e2f';
+    container.style.background = '#2c2c3c';
+    tableSection.style.background = '#2c2c3c';
+    heading.style.color = '#ffffff';
+    tableHeading.style.color = '#ffffff';
+    labels.forEach(label => label.style.color = '#ffffff');
+    inputs.forEach(input => input.style.backgroundColor = '#444');
+    button.style.backgroundColor = '#555';
+    button.style.color = '#fff';
+    toggleButton.textContent = 'Light Mode';
+    toggleButton.style.backgroundColor = '#3a8dde';
+    toggleButton.style.color = '#ffffff';
+  } else {
+    document.body.style.background = 'linear-gradient(to right, #3a8dde, #6fb1fc)';
+    container.style.background = 'white';
+    tableSection.style.background = 'white';
+    heading.style.color = '#3a8dde';
+    tableHeading.style.color = '#3a8dde';
+    labels.forEach(label => label.style.color = '#000');
+    inputs.forEach(input => input.style.backgroundColor = '#fff');
+    button.style.backgroundColor = '#3a8dde';
+    button.style.color = '#fff';
+    toggleButton.textContent = 'Dark Mode';
+    toggleButton.style.backgroundColor = '#ffffff';
+    toggleButton.style.color = '#3a8dde';
+  }
+});
