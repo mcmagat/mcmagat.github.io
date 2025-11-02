@@ -12,10 +12,10 @@ const container = document.querySelector('.container');
 Object.assign(container.style, {
  background: 'white',
  padding: '2rem',
- borderRadius: '10px',
- boxShadow: '0 0 20px rgba(0,0,0,0.1)',
+ borderRadius: '10%',
+ boxShadow: '0 0 20% rgba(0,0,0,0.1)',
  width: '100%',
- maxWidth: '400px'
+ maxWidth: '400%'
 });
 
 
