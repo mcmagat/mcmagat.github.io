@@ -1,22 +1,118 @@
-<!-- ...existing code... -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Formative4 - Signup</title>
+  <title>Formative4 - Sign up</title>
   <style>
+    /* base + responsive layout */
     *, *::before, *::after { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; height: 100%; }
-    body { font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial; }
-    img { max-width: 100%; height: auto; display: block; }
-    .table-section table { width: 100%; border-collapse: collapse; display: block; overflow-x: auto; white-space: nowrap; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
+      background: linear-gradient(to right, #8ebdecff, #115098ff);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center; /* center content horizontally */
+      padding: 2rem;
+    }
+
+    main {
+      width: 100%;
+      max-width: 920px; /* allow larger viewport but center */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .container, .table-section {
+      width: 100%;
+      max-width: 520px; /* primary container width */
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.6rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .table-section {
+      max-width: 720px; /* table area wider if needed */
+      padding: 1rem;
+    }
+
+    h2, h3 { color: #3a8dde; text-align: center; margin: 0 0 0.8rem 0; }
+    form { width: 100%; display: block; }
+
+    label { display:block; margin-top: 0.9rem; font-weight:600; font-size:0.95rem; }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #fff;
+      font-size: 0.95rem;
+    }
+
+    button[type="submit"] {
+      margin-top: 1.25rem;
+      width: 100%;
+      padding: 0.7rem;
+      background-color: #3a8dde;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    /* responsive table: horizontal scroll on small screens */
+    .table-section table {
+      width: 100%;
+      border-collapse: collapse;
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .table-section th, .table-section td {
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    .table-section th {
+      background: #e6f0ff;
+      font-weight: 600;
+    }
+
+    /* Theme toggle button (positioned by JS) */
+    #toggleTheme {
+      position: fixed;
+      z-index: 1000;
+      border-radius: 6px;
+      border: 2px solid #3a8dde;
+      background: #fff;
+      color: #3a8dde;
+      padding: 0.6rem 1rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* small screens adjustments */
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      .container, .table-section { padding: 1rem; border-radius: 8px; }
+      .container { max-width: 520px; }
+      .table-section { max-width: 100%; }
+      h2 { font-size: 1.25rem; }
+      #toggleTheme { right: 10px; bottom: 10px; padding: 0.45rem 0.6rem; }
+      .table-section th, .table-section td { font-size: 0.85rem; padding: 0.45rem; }
+    }
   </style>
 </head>
 <body>
   <main>
     <section class="container" aria-labelledby="form-title">
-      <h2 id="form-title">Signup Form</h2>
+      <h2 id="form-title">Sign-up Form</h2>
 
       <form id="signupForm" novalidate>
         <label for="idNumber">ID Number</label>
