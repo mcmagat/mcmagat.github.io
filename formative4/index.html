@@ -4,18 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sign Up Form</title>
-  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #3a8dde, #6fb1fc);
       margin: 0;
-      padding: 0;
+      padding: 2rem;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      height: 100vh;
     }
 
     .container {
@@ -23,7 +21,8 @@
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      width: 400px;
+      width: 100%;
+      max-width: 400px;
     }
 
     h2 {
@@ -61,8 +60,23 @@
       background-color: #2f76c3;
     }
 
+    .table-section {
+      background: white;
+      margin-top: 3rem;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .table-section h3 {
+      color: #3a8dde;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
     table {
-      margin-top: 2rem;
       width: 100%;
       border-collapse: collapse;
     }
@@ -75,6 +89,10 @@
 
     th {
       background-color: #e6f0ff;
+    }
+
+    tr:hover {
+      background-color: #f0f8ff;
     }
   </style>
 </head>
@@ -107,7 +125,10 @@
 
       <button type="submit">Save</button>
     </form>
+  </div>
 
+  <div class="table-section">
+    <h3>Submitted Data</h3>
     <table id="dataTable">
       <thead>
         <tr>
