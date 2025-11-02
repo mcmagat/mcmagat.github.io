@@ -214,12 +214,12 @@ if (darkMode) {
   const ths = table.querySelectorAll('th');
   const tds = table.querySelectorAll('td');
   ths.forEach(th => th.style.color = '#2a0b3eff');
-  tds.forEach(td => td.style.color = '#2a0b3eff');
+  tds.forEach(td => td.style.color = '#f9f9f9ff');
 } else {
   // ... existing light mode styles
   const ths = table.querySelectorAll('th');
   const tds = table.querySelectorAll('td');
-  ths.forEach(th => th.style.color = '#ffffffff');
-  tds.forEach(td => td.style.color = '#ffffffff');
+  ths.forEach(th => th.style.color = '#000000ff');
+  tds.forEach(td => td.style.color = '#000000ff');
 }
 });
