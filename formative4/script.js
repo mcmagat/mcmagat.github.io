@@ -79,13 +79,28 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 🎯 Birthday input styling
   const birthdayInput = document.getElementById('birthday');
-  birthdayInput.type = 'date';
-  birthdayInput.style.color = '#333';
-  birthdayInput.style.backgroundColor = '#eafaf1';
-  birthdayInput.style.border = '1px solid #2ecc71';
-  birthdayInput.style.borderRadius = '6px';
+birthdayInput.type = 'date';
+birthdayInput.style.color = '#333';
+birthdayInput.style.backgroundColor = '#ffffff'; // white background
+birthdayInput.style.border = '1px solid #ccc';
+birthdayInput.style.borderRadius = '6px';
+birthdayInput.style.padding = '12px';
+birthdayInput.style.marginTop = '8px';
+birthdayInput.style.width = '100%';
+birthdayInput.style.fontSize = '16px';
+birthdayInput.style.transition = 'box-shadow 0.3s ease, transform 0.3s ease';
+
+birthdayInput.addEventListener('focus', () => {
+  birthdayInput.style.boxShadow = '0 0 8px rgba(46,204,113,0.5)';
+  birthdayInput.style.transform = 'scale(1.02)';
+});
+birthdayInput.addEventListener('blur', () => {
+  birthdayInput.style.boxShadow = 'none';
+  birthdayInput.style.transform = 'scale(1)';
+});
+
+saveBtn.style.marginTop = '24px'; // increased spacing from birthday field
 
   // 💾 Save Button
   const saveBtn = document.getElementById('saveBtn');
