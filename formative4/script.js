@@ -1,3 +1,4 @@
+// Base layout styling
 document.body.style.fontFamily = 'Segoe UI, sans-serif';
 document.body.style.background = 'linear-gradient(to right, #8ebdecff, #115098ff)';
 document.body.style.margin = '0';
@@ -5,245 +6,243 @@ document.body.style.padding = '2rem';
 document.body.style.display = 'flex';
 document.body.style.flexDirection = 'column';
 document.body.style.alignItems = 'center';
+document.body.style.flexWrap = 'wrap';
+document.body.style.justifyContent = 'center';
+document.body.style.boxSizing = 'border-box';
+document.body.style.fontSize = '1rem';
 
+// Responsive tweaks
+function applyResponsiveTweaks() {
+  if (window.innerWidth < 500) {
+    container.style.padding = '1rem';
+    tableSection.style.padding = '1rem';
+    heading.style.fontSize = '1.2rem';
+    tableHeading.style.fontSize = '1rem';
+  } else {
+    container.style.padding = '2rem';
+    tableSection.style.padding = '2rem';
+    heading.style.fontSize = '1.5rem';
+    tableHeading.style.fontSize = '1.2rem';
+  }
+}
+window.addEventListener('resize', applyResponsiveTweaks);
 
 // Style container
 const container = document.querySelector('.container');
 Object.assign(container.style, {
- background: 'white',
- padding: '2rem',
- borderRadius: '10px',
- boxShadow: '0 0 20px rgba(0,0,0,0.1)',
- width: '100%',
- maxWidth: '400px'
+  background: 'white',
+  borderRadius: '10px',
+  boxShadow: '0 0 20px rgba(0,0,0,0.1)',
+  width: '90%',
+  maxWidth: '500px',
+  boxSizing: 'border-box'
 });
-
 
 // Style heading
 const heading = container.querySelector('h2');
 heading.style.textAlign = 'center';
 heading.style.color = '#3a8dde';
-
+heading.style.fontSize = '1.5rem';
 
 // Style labels and inputs
 const labels = container.querySelectorAll('label');
 labels.forEach(label => {
- label.style.display = 'block';
- label.style.marginTop = '1rem';
- label.style.fontWeight = 'bold';
+  label.style.display = 'block';
+  label.style.marginTop = '1rem';
+  label.style.fontWeight = 'bold';
+  label.style.fontSize = '1rem';
 });
-
 
 const inputs = container.querySelectorAll('input, select');
 inputs.forEach(input => {
- input.style.width = '100%';
- input.style.padding = '0.5rem';
- input.style.marginTop = '0.3rem';
- input.style.border = '1px solid #ccc';
- input.style.borderRadius = '5px';
+  input.style.width = '100%';
+  input.style.padding = '0.5rem';
+  input.style.marginTop = '0.3rem';
+  input.style.border = '1px solid #ccc';
+  input.style.borderRadius = '5px';
+  input.style.boxSizing = 'border-box';
 });
-
 
 // Style button
 const button = container.querySelector('button');
 Object.assign(button.style, {
- marginTop: '1.5rem',
- width: '100%',
- padding: '0.7rem',
- backgroundColor: '#3a8dde',
- color: 'white',
- border: 'none',
- borderRadius: '5px',
- cursor: 'pointer',
- transition: 'background-color 0.3s ease'
+  marginTop: '1.5rem',
+  width: '100%',
+  padding: '0.7rem',
+  backgroundColor: '#3a8dde',
+  color: 'white',
+  border: 'none',
+  borderRadius: '5px',
+  cursor: 'pointer',
+  transition: 'background-color 0.3s ease',
+  fontSize: '1rem'
 });
 button.addEventListener('mouseover', () => {
- button.style.backgroundColor = '#2f76c3';
+  button.style.backgroundColor = '#2f76c3';
 });
 button.addEventListener('mouseout', () => {
- button.style.backgroundColor = '#3a8dde';
+  button.style.backgroundColor = '#3a8dde';
 });
-
 
 // Style table section
 const tableSection = document.querySelector('.table-section');
 Object.assign(tableSection.style, {
- background: 'white',
- marginTop: '3rem',
- padding: '2rem',
- borderRadius: '10px',
- boxShadow: '0 0 15px rgba(0,0,0,0.05)',
- width: '100%',
- maxWidth: '600px'
+  background: 'white',
+  marginTop: '3rem',
+  borderRadius: '10px',
+  boxShadow: '0 0 15px rgba(0,0,0,0.05)',
+  width: '95%',
+  maxWidth: '500px',
+  boxSizing: 'border-box'
 });
-
 
 const tableHeading = tableSection.querySelector('h3');
 tableHeading.style.color = '#3a8dde';
 tableHeading.style.marginBottom = '1rem';
 tableHeading.style.textAlign = 'center';
-
+tableHeading.style.fontSize = '1.2rem';
 
 // Style table
 const table = document.getElementById('dataTable');
 table.style.width = '100%';
+table.style.maxWidth = '100%';
 table.style.borderCollapse = 'collapse';
-
+table.style.boxSizing = 'border-box';
+table.style.display = 'block';
+table.style.overflowX = 'auto';
+table.style.whiteSpace = 'nowrap';
 
 const ths = table.querySelectorAll('th');
 ths.forEach(th => {
- th.style.border = '1px solid #ccc';
- th.style.padding = '0.5rem';
- th.style.textAlign = 'center';
- th.style.backgroundColor = '#e6f0ff';
+  th.style.border = '1px solid #ccc';
+  th.style.padding = '0.5rem';
+  th.style.textAlign = 'left';
+  th.style.backgroundColor = '#e6f0ff';
+  th.style.color = '#000000ff';
+  th.style.fontSize = '0.9rem';
 });
-
 
 const tds = table.querySelectorAll('td');
 tds.forEach(td => {
- td.style.border = '1px solid #ccc';
- td.style.padding = '0.5rem';
- td.style.textAlign = 'center';
+  td.style.border = '1px solid #ccc';
+  td.style.padding = '0.5rem';
+  td.style.textAlign = 'left';
+  td.style.color = '#000000ff';
+  td.style.fontSize = '0.9rem';
 });
-
 
 // Hover effect for rows
 table.addEventListener('mouseover', e => {
- if (e.target.tagName === 'TD') {
-   e.target.parentElement.style.backgroundColor = '#f0f8ff';
- }
+  if (e.target.tagName === 'TD') {
+    e.target.parentElement.style.backgroundColor = '#f0f8ff';
+  }
 });
 table.addEventListener('mouseout', e => {
- if (e.target.tagName === 'TD') {
-   e.target.parentElement.style.backgroundColor = '';
- }
+  if (e.target.tagName === 'TD') {
+    e.target.parentElement.style.backgroundColor = '';
+  }
 });
-
 
 // Data logic
 const userData = [];
 
-
 document.getElementById('signupForm').addEventListener('submit', function (e) {
- e.preventDefault();
+  e.preventDefault();
 
+  const idNumber = document.getElementById('idNumber').value;
+  const firstName = document.getElementById('firstName').value;
+  const middleName = document.getElementById('middleName').value;
+  const lastName = document.getElementById('lastName').value;
+  const gender = document.getElementById('gender').value;
+  const birthday = document.getElementById('birthday').value;
 
- const idNumber = document.getElementById('idNumber').value;
- const firstName = document.getElementById('firstName').value;
- const middleName = document.getElementById('middleName').value;
- const lastName = document.getElementById('lastName').value;
- const gender = document.getElementById('gender').value;
- const birthday = document.getElementById('birthday').value;
+  const user = {
+    idNumber,
+    firstName,
+    middleName,
+    lastName,
+    gender,
+    birthday
+  };
 
-
- const user = {
-   idNumber,
-   firstName,
-   middleName,
-   lastName,
-   gender,
-   birthday
- };
-
-
- userData.push(user);
- updateTable();
- this.reset();
+  userData.push(user);
+  updateTable();
+  this.reset();
 });
-
 
 function updateTable() {
- const tbody = document.querySelector('#dataTable tbody');
- tbody.innerHTML = '';
+  const tbody = document.querySelector('#dataTable tbody');
+  tbody.innerHTML = '';
 
+  userData.forEach(user => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${user.idNumber}</td>
+      <td>${user.firstName}</td>
+      <td>${user.middleName}</td>
+      <td>${user.lastName}</td>
+      <td>${user.gender}</td>
+      <td>${user.birthday}</td>
+    `;
+    tbody.appendChild(row);
+  });
 
- userData.forEach(user => {
-   const row = document.createElement('tr');
-   row.innerHTML = `
-     <td>${user.idNumber}</td>
-     <td>${user.firstName}</td>
-     <td>${user.middleName}</td>
-     <td>${user.lastName}</td>
-     <td>${user.gender}</td>
-     <td>${user.birthday}</td>
-   `;
-   tbody.appendChild(row);
- });
-
-
- const tds = tbody.querySelectorAll('td');
- tds.forEach(td => {
-   td.style.border = '1px solid #ccc';
-   td.style.padding = '0.5rem';
-   td.style.textAlign = 'center';
- });
+  const tds = tbody.querySelectorAll('td');
+  tds.forEach(td => {
+    td.style.border = '1px solid #ccc';
+    td.style.padding = '0.5rem';
+    td.style.textAlign = 'left';
+    td.style.color = darkMode ? '#f9f9f9ff' : '#000000ff';
+    td.style.fontSize = '0.9rem';
+  });
 }
 
-
+// Theme toggle button
 const toggleButton = document.getElementById('toggleTheme');
 Object.assign(toggleButton.style, {
- position: 'fixed',
- bottom: '20px',
- right: '20px',
- padding: '0.6rem 1rem',
- backgroundColor: '#ffffff',
- color: '#3a8dde',
- border: '2px solid #3a8dde',
- borderRadius: '5px',
- cursor: 'pointer',
- fontWeight: 'bold',
- zIndex: '1000',
- boxShadow: '0 2px 6px rgba(0,0,0,0.2)'
+  position: 'fixed',
+  bottom: '20px',
+  right: '20px',
+  padding: '0.6rem 1rem',
+  backgroundColor: '#ffffff',
+  color: '#3a8dde',
+  border: '2px solid #3a8dde',
+  borderRadius: '5px',
+  cursor: 'pointer',
+  fontWeight: 'bold',
+  zIndex: '1000',
+  boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
+  fontSize: '0.9rem'
 });
-
-
-
+toggleButton.title = "Switch between light and dark themes";
 
 let darkMode = false;
 
-
 toggleButton.addEventListener('click', () => {
- darkMode = !darkMode;
+  darkMode = !darkMode;
 
+  if (darkMode) {
+    document.body.style.background = '#382b57ff';
+    container.style.background = '#2c2c3c';
+    tableSection.style.background = '#280e38ff';
+    heading.style.color = '#ffffff';
+    tableHeading.style.color = '#ffffff';
+    labels.forEach(label => label.style.color = '#ffffff');
+    inputs.forEach(input => input.style.backgroundColor = '#f8f8f8ff');
+    button.style.backgroundColor = '#555';
+    button.style.color = '#fff';
+    toggleButton.textContent = 'Light Mode';
+    toggleButton.style.backgroundColor = '#3a8dde';
+    toggleButton.style.color = '#ffffff';
 
- if (darkMode) {
-   document.body.style.background = '#382b57ff';
-   container.style.background = '#2c2c3c';
-   tableSection.style.background = '#280e38ff';
-   heading.style.color = '#ffffff';
-   tableHeading.style.color = '#ffffff';
-   labels.forEach(label => label.style.color = '#ffffff');
-   inputs.forEach(input => input.style.backgroundColor = '#f8f8f8ff');
-   button.style.backgroundColor = '#555';
-   button.style.color = '#fff';
-   toggleButton.textContent = 'Light Mode';
-   toggleButton.style.backgroundColor = '#3a8dde';
-   toggleButton.style.color = '#ffffff';
- } else {
-   document.body.style.background = 'linear-gradient(to right, #3a8dde, #6fb1fc)';
-   container.style.background = 'white';
-   tableSection.style.background = 'white';
-   heading.style.color = '#3a8dde';
-   tableHeading.style.color = '#3a8dde';
-   labels.forEach(label => label.style.color = '#000');
-   inputs.forEach(input => input.style.backgroundColor = '#fff');
-   button.style.backgroundColor = '#3a8dde';
-   button.style.color = '#fff';
-   toggleButton.textContent = 'Dark Mode';
-   toggleButton.style.backgroundColor = '#ffffff';
-   toggleButton.style.color = '#3a8dde';
- }
-if (darkMode) {
- // ... existing dark mode styles
- const ths = table.querySelectorAll('th');
- const tds = table.querySelectorAll('td');
- ths.forEach(th => th.style.color = '#2a0b3eff');
- tds.forEach(td => td.style.color = '#f9f9f9ff');
-} else {
- // ... existing light mode styles
- const ths = table.querySelectorAll('th');
- const tds = table.querySelectorAll('td');
- ths.forEach(th => th.style.color = '#000000ff');
- tds.forEach(td => td.style.color = '#000000ff');
-}
-});
+    const ths = table.querySelectorAll('th');
+    const tds = table.querySelectorAll('td');
+    ths.forEach(th => th.style.color = '#2a0b3eff');
+    tds.forEach(td => td.style.color = '#f9f9f9ff');
+  } else {
+    document.body.style.background = 'linear-gradient(to right, #3a8dde, #6fb1fc)';
+    container.style.background = 'white';
+    tableSection.style.background = 'white';
+    heading.style.color = '#3a8dde';
+    tableHeading.style.color = '#3a8dde';
+    labels.for
