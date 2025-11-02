@@ -27,7 +27,7 @@ heading3.addEventListener('mouseout', () => heading3.style.transform = 'scale(1)
 // 🎨 Form styling
 const form = document.getElementById('signupForm');
 form.style.backgroundColor = '#ffffff';
-form.style.padding = '15px';
+form.style.padding = '50px';
 form.style.borderRadius = '8px';
 form.style.boxShadow = '0 0 10px rgba(0,0,0,0.1)';
 form.style.marginBottom = '20px';
