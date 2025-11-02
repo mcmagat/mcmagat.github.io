@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
   const userDataList = [];
 
-  // 🌈 Gradient background
-  document.body.style.background = 'linear-gradient(to right, #6a11cb, #2575fc)';
+  // 🌈 Gradient background (blue to green)
+  document.body.style.background = 'linear-gradient(to right, #1e3c72, #2a9d8f)';
   document.body.style.fontFamily = 'Arial, sans-serif';
   document.body.style.padding = '20px';
   document.body.style.margin = '0';
@@ -70,7 +70,7 @@ window.addEventListener('DOMContentLoaded', () => {
     input.style.transition = 'box-shadow 0.3s ease, transform 0.3s ease';
 
     input.addEventListener('focus', () => {
-      input.style.boxShadow = '0 0 8px rgba(106,17,203,0.5)';
+      input.style.boxShadow = '0 0 8px rgba(46,204,113,0.5)';
       input.style.transform = 'scale(1.02)';
     });
     input.addEventListener('blur', () => {
@@ -78,6 +78,14 @@ window.addEventListener('DOMContentLoaded', () => {
       input.style.transform = 'scale(1)';
     });
   });
+
+  // 🎯 Birthday input styling
+  const birthdayInput = document.getElementById('birthday');
+  birthdayInput.type = 'date';
+  birthdayInput.style.color = '#333';
+  birthdayInput.style.backgroundColor = '#eafaf1';
+  birthdayInput.style.border = '1px solid #2ecc71';
+  birthdayInput.style.borderRadius = '6px';
 
   // 💾 Save Button
   const saveBtn = document.getElementById('saveBtn');
@@ -92,7 +100,7 @@ window.addEventListener('DOMContentLoaded', () => {
   toggleBtn.addEventListener('click', () => {
     const isDark = document.body.style.backgroundColor === 'rgb(30, 30, 30)';
     document.body.style.background = isDark
-      ? 'linear-gradient(to right, #6a11cb, #2575fc)'
+      ? 'linear-gradient(to right, #1e3c72, #2a9d8f)'
       : '#1e1e1e';
     document.body.style.color = isDark ? '#000' : '#f0f0f0';
     form.style.backgroundColor = isDark ? '#ffffff' : '#2c2c2c';
@@ -141,7 +149,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
 
       row.addEventListener('mouseover', () => {
-        row.style.backgroundColor = '#f0f8ff';
+        row.style.backgroundColor = '#eafaf1';
       });
       row.addEventListener('mouseout', () => {
         row.style.backgroundColor = '';
@@ -155,13 +163,13 @@ window.addEventListener('DOMContentLoaded', () => {
     table.style.borderCollapse = 'collapse';
     table.style.marginTop = '30px';
     table.style.backgroundColor = '#ffffff';
-    table.style.border = '2px solid #2575fc';
+    table.style.border = '2px solid #2ecc71';
     table.style.borderRadius = '8px';
     table.style.overflow = 'hidden';
 
     const headers = table.querySelectorAll('th');
     headers.forEach(th => {
-      th.style.backgroundColor = '#6a11cb';
+      th.style.backgroundColor = '#1e3c72';
       th.style.color = '#fff';
       th.style.padding = '12px';
       th.style.fontSize = '16px';
@@ -174,7 +182,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // 🎨 Button Styling Function
   function styleButton(btn) {
-    btn.style.backgroundColor = '#2575fc';
+    btn.style.backgroundColor = '#2a9d8f';
     btn.style.color = '#fff';
     btn.style.border = 'none';
     btn.style.borderRadius = '6px';
@@ -184,11 +192,11 @@ window.addEventListener('DOMContentLoaded', () => {
     btn.style.transition = 'background-color 0.3s ease, transform 0.3s ease';
 
     btn.addEventListener('mouseover', () => {
-      btn.style.backgroundColor = '#6a11cb';
+      btn.style.backgroundColor = '#1e3c72';
       btn.style.transform = 'scale(1.05)';
     });
     btn.addEventListener('mouseout', () => {
-      btn.style.backgroundColor = '#2575fc';
+      btn.style.backgroundColor = '#2a9d8f';
       btn.style.transform = 'scale(1)';
     });
   }
