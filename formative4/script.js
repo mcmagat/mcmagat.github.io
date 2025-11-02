@@ -147,6 +147,20 @@ birthdayInput.addEventListener('blur', () => {
     const tableBody = document.querySelector('#dataTable tbody');
     tableBody.innerHTML = '';
 
+if (userDataList.length === 0) {
+  const emptyRow = document.createElement('tr');
+  const emptyCell = document.createElement('td');
+  emptyCell.colSpan = 6;
+  emptyCell.textContent = 'No data submitted yet';
+  emptyCell.style.textAlign = 'center';
+  emptyCell.style.color = '#888';
+  emptyCell.style.padding = '12px';
+  emptyRow.appendChild(emptyCell);
+  tableBody.appendChild(emptyRow);
+  return;
+}
+
+
     userDataList.forEach(user => {
       const row = document.createElement('tr');
 

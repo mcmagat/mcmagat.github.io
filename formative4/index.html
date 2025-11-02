@@ -37,21 +37,25 @@
   <button id="toggleThemeBtn">Switch Mode</button>
 
   <h3>Submitted Data</h3>
-  <table id="dataTable">
-    <thead>
-      <tr>
-        <th>ID Number</th>
-        <th>First Name</th>
-        <th>Middle Name</th>
-        <th>Last Name</th>
-        <th>Gender</th>
-        <th>Birthday</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Data rows will be inserted here -->
-    </tbody>
-  </table>
+<table id="dataTable">
+  <thead>
+    <tr>
+      <th>ID Number</th>
+      <th>First Name</th>
+      <th>Middle Name</th>
+      <th>Last Name</th>
+      <th>Gender</th>
+      <th>Birthday</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- This can be empty or contain a placeholder row -->
+    <tr>
+      <td colspan="6" style="text-align:center; color:#888;">No data submitted yet</td>
+    </tr>
+  </tbody>
+</table>
+
 
   <script src="script.js"></script>
 </body>
