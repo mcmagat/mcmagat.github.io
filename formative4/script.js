@@ -1,248 +1,272 @@
-// Base layout styling
-document.body.style.fontFamily = 'Segoe UI, sans-serif';
-document.body.style.background = 'linear-gradient(to right, #8ebdecff, #115098ff)';
-document.body.style.margin = '0';
-document.body.style.padding = '2rem';
-document.body.style.display = 'flex';
-document.body.style.flexDirection = 'column';
-document.body.style.alignItems = 'center';
-document.body.style.flexWrap = 'wrap';
-document.body.style.justifyContent = 'center';
-document.body.style.boxSizing = 'border-box';
-document.body.style.fontSize = '1rem';
+// ...existing code...
+document.addEventListener('DOMContentLoaded', () => {
+  // Base layout
+  document.body.style.background = 'linear-gradient(to right, #8ebdecff, #115098ff)';
+  document.body.style.padding = '2rem';
+  document.body.style.display = 'flex';
+  document.body.style.flexDirection = 'column';
+  document.body.style.alignItems = 'center';
+  document.body.style.justifyContent = 'center';
+  document.body.style.minHeight = '100vh';
+  document.body.style.boxSizing = 'border-box';
 
-// Responsive tweaks
-function applyResponsiveTweaks() {
-  if (window.innerWidth < 500) {
-    container.style.padding = '1rem';
-    tableSection.style.padding = '1rem';
-    heading.style.fontSize = '1.2rem';
-    tableHeading.style.fontSize = '1rem';
-  } else {
-    container.style.padding = '2rem';
-    tableSection.style.padding = '2rem';
-    heading.style.fontSize = '1.5rem';
-    tableHeading.style.fontSize = '1.2rem';
+  // Elements
+  const container = document.querySelector('.container');
+  const tableSection = document.querySelector('.table-section');
+  const table = document.getElementById('dataTable');
+  const toggleButton = document.getElementById('toggleTheme');
+  const signupForm = document.getElementById('signupForm');
+
+  // Safety check
+  if (!container || !tableSection || !table || !toggleButton || !signupForm) {
+    console.error('Missing required elements: .container, .table-section, #dataTable, #toggleTheme or #signupForm');
+    return;
   }
-}
-window.addEventListener('resize', applyResponsiveTweaks);
 
-// Style container
-const container = document.querySelector('.container');
-Object.assign(container.style, {
-  background: 'white',
-  borderRadius: '10px',
-  boxShadow: '0 0 20px rgba(0,0,0,0.1)',
-  width: '90%',
-  maxWidth: '500px',
-  boxSizing: 'border-box'
-});
+  // Container styles
+  Object.assign(container.style, {
+    background: 'white',
+    borderRadius: '10px',
+    boxShadow: '0 0 20px rgba(0,0,0,0.08)',
+    width: '90%',
+    maxWidth: '520px',
+    padding: '2rem',
+    boxSizing: 'border-box'
+  });
 
-// Style heading
-const heading = container.querySelector('h2');
-heading.style.textAlign = 'center';
-heading.style.color = '#3a8dde';
-heading.style.fontSize = '1.5rem';
+  // Heading
+  const heading = container.querySelector('h2');
+  heading.style.textAlign = 'center';
+  heading.style.color = '#3a8dde';
+  heading.style.margin = '0 0 0.5rem 0';
+  heading.style.fontSize = '1.5rem';
 
-// Style labels and inputs
-const labels = container.querySelectorAll('label');
-labels.forEach(label => {
-  label.style.display = 'block';
-  label.style.marginTop = '1rem';
-  label.style.fontWeight = 'bold';
-  label.style.fontSize = '1rem';
-});
+  // Labels and inputs
+  const labels = container.querySelectorAll('label');
+  labels.forEach(label => {
+    label.style.display = 'block';
+    label.style.marginTop = '1rem';
+    label.style.fontWeight = '600';
+    label.style.fontSize = '0.95rem';
+  });
+  const inputs = container.querySelectorAll('input, select, textarea');
+  inputs.forEach(input => {
+    Object.assign(input.style, {
+      width: '100%',
+      padding: '0.5rem',
+      marginTop: '0.3rem',
+      border: '1px solid #ccc',
+      borderRadius: '6px',
+      boxSizing: 'border-box',
+      backgroundColor: '#fff'
+    });
+  });
 
-const inputs = container.querySelectorAll('input, select');
-inputs.forEach(input => {
-  input.style.width = '100%';
-  input.style.padding = '0.5rem';
-  input.style.marginTop = '0.3rem';
-  input.style.border = '1px solid #ccc';
-  input.style.borderRadius = '5px';
-  input.style.boxSizing = 'border-box';
-});
+  // Submit button
+  const button = container.querySelector('button[type="submit"]');
+  Object.assign(button.style, {
+    marginTop: '1.25rem',
+    width: '100%',
+    padding: '0.7rem',
+    backgroundColor: '#3a8dde',
+    color: '#fff',
+    border: 'none',
+    borderRadius: '6px',
+    cursor: 'pointer',
+    fontSize: '1rem'
+  });
+  button.addEventListener('mouseover', () => button.style.backgroundColor = '#2f76c3');
+  button.addEventListener('mouseout', () => button.style.backgroundColor = '#3a8dde');
 
-// Style button
-const button = container.querySelector('button');
-Object.assign(button.style, {
-  marginTop: '1.5rem',
-  width: '100%',
-  padding: '0.7rem',
-  backgroundColor: '#3a8dde',
-  color: 'white',
-  border: 'none',
-  borderRadius: '5px',
-  cursor: 'pointer',
-  transition: 'background-color 0.3s ease',
-  fontSize: '1rem'
-});
-button.addEventListener('mouseover', () => {
-  button.style.backgroundColor = '#2f76c3';
-});
-button.addEventListener('mouseout', () => {
-  button.style.backgroundColor = '#3a8dde';
-});
+  // Table section styles
+  Object.assign(tableSection.style, {
+    background: 'white',
+    marginTop: '1.5rem',
+    borderRadius: '10px',
+    boxShadow: '0 0 15px rgba(0,0,0,0.05)',
+    width: '95%',
+    maxWidth: '720px',
+    padding: '1.2rem',
+    boxSizing: 'border-box'
+  });
 
-// Style table section
-const tableSection = document.querySelector('.table-section');
-Object.assign(tableSection.style, {
-  background: 'white',
-  marginTop: '3rem',
-  borderRadius: '10px',
-  boxShadow: '0 0 15px rgba(0,0,0,0.05)',
-  width: '95%',
-  maxWidth: '500px',
-  boxSizing: 'border-box'
-});
+  const tableHeading = tableSection.querySelector('h3');
+  tableHeading.style.color = '#3a8dde';
+  tableHeading.style.margin = '0 0 0.5rem 0';
+  tableHeading.style.fontSize = '1.1rem';
+  tableHeading.style.textAlign = 'center';
 
-const tableHeading = tableSection.querySelector('h3');
-tableHeading.style.color = '#3a8dde';
-tableHeading.style.marginBottom = '1rem';
-tableHeading.style.textAlign = 'center';
-tableHeading.style.fontSize = '1.2rem';
+  // Table basic styles
+  Object.assign(table.style, {
+    width: '100%',
+    borderCollapse: 'collapse',
+    display: 'block',
+    overflowX: 'auto',
+    whiteSpace: 'nowrap'
+  });
 
-// Style table
-const table = document.getElementById('dataTable');
-table.style.width = '100%';
-table.style.maxWidth = '100%';
-table.style.borderCollapse = 'collapse';
-table.style.boxSizing = 'border-box';
-table.style.display = 'block';
-table.style.overflowX = 'auto';
-table.style.whiteSpace = 'nowrap';
+  table.querySelectorAll('th').forEach(th => {
+    Object.assign(th.style, {
+      border: '1px solid #ddd',
+      padding: '0.5rem',
+      backgroundColor: '#e6f0ff',
+      fontWeight: '600',
+      textAlign: 'left'
+    });
+  });
+  table.querySelectorAll('td').forEach(td => {
+    Object.assign(td.style, {
+      border: '1px solid #ddd',
+      padding: '0.5rem',
+      textAlign: 'left'
+    });
+  });
 
-const ths = table.querySelectorAll('th');
-ths.forEach(th => {
-  th.style.border = '1px solid #ccc';
-  th.style.padding = '0.5rem';
-  th.style.textAlign = 'left';
-  th.style.backgroundColor = '#e6f0ff';
-  th.style.color = '#000000ff';
-  th.style.fontSize = '0.9rem';
-});
+  // Row hover
+  table.addEventListener('mouseover', e => {
+    const td = e.target.closest('td');
+    if (td) td.parentElement.style.backgroundColor = '#f7fbff';
+  });
+  table.addEventListener('mouseout', e => {
+    const td = e.target.closest('td');
+    if (td) td.parentElement.style.backgroundColor = '';
+  });
 
-const tds = table.querySelectorAll('td');
-tds.forEach(td => {
-  td.style.border = '1px solid #ccc';
-  td.style.padding = '0.5rem';
-  td.style.textAlign = 'left';
-  td.style.color = '#000000ff';
-  td.style.fontSize = '0.9rem';
-});
-
-// Hover effect for rows
-table.addEventListener('mouseover', e => {
-  if (e.target.tagName === 'TD') {
-    e.target.parentElement.style.backgroundColor = '#f0f8ff';
+  // Responsive tweaks
+  function applyResponsiveTweaks() {
+    if (window.innerWidth < 500) {
+      container.style.padding = '1rem';
+      tableSection.style.padding = '0.75rem';
+      heading.style.fontSize = '1.15rem';
+      tableHeading.style.fontSize = '1rem';
+      toggleButton.style.right = '10px';
+      toggleButton.style.bottom = '10px';
+      toggleButton.style.padding = '0.45rem 0.6rem';
+    } else {
+      container.style.padding = '2rem';
+      tableSection.style.padding = '1.2rem';
+      heading.style.fontSize = '1.5rem';
+      tableHeading.style.fontSize = '1.1rem';
+      toggleButton.style.right = '20px';
+      toggleButton.style.bottom = '20px';
+      toggleButton.style.padding = '0.6rem 1rem';
+    }
   }
-});
-table.addEventListener('mouseout', e => {
-  if (e.target.tagName === 'TD') {
-    e.target.parentElement.style.backgroundColor = '';
+  window.addEventListener('resize', applyResponsiveTweaks);
+  applyResponsiveTweaks(); // initial
+
+  // Data logic
+  const userData = [];
+
+  signupForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const idNumber = (document.getElementById('idNumber') || {}).value?.trim() || '';
+    const firstName = (document.getElementById('firstName') || {}).value?.trim() || '';
+    const middleName = (document.getElementById('middleName') || {}).value?.trim() || '';
+    const lastName = (document.getElementById('lastName') || {}).value?.trim() || '';
+    const gender = (document.getElementById('gender') || {}).value || '';
+    const birthday = (document.getElementById('birthday') || {}).value || '';
+
+    if (!idNumber && !firstName && !lastName) {
+      // minimal validation: require at least one identifying value
+      return;
+    }
+
+    userData.push({ idNumber, firstName, middleName, lastName, gender, birthday });
+    updateTable();
+    this.reset();
+  });
+
+  let darkMode = false;
+
+  function updateTable() {
+    const tbody = table.querySelector('tbody');
+    if (!tbody) return;
+    tbody.innerHTML = '';
+    userData.forEach(user => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${escapeHtml(user.idNumber)}</td>
+        <td>${escapeHtml(user.firstName)}</td>
+        <td>${escapeHtml(user.middleName)}</td>
+        <td>${escapeHtml(user.lastName)}</td>
+        <td>${escapeHtml(user.gender)}</td>
+        <td>${escapeHtml(user.birthday)}</td>
+      `;
+      tbody.appendChild(row);
+    });
+    // restyle newly added cells
+    tbody.querySelectorAll('td').forEach(td => {
+      td.style.color = darkMode ? '#f9f9f9' : '#000';
+      td.style.fontSize = '0.9rem';
+    });
   }
-});
 
-// Data logic
-const userData = [];
+  // small HTML escape util
+  function escapeHtml(str = '') {
+    return String(str)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;');
+  }
 
-document.getElementById('signupForm').addEventListener('submit', function (e) {
-  e.preventDefault();
+  // Theme toggle styling & behavior
+  Object.assign(toggleButton.style, {
+    position: 'fixed',
+    right: '20px',
+    bottom: '20px',
+    padding: '0.6rem 1rem',
+    backgroundColor: '#ffffff',
+    color: '#3a8dde',
+    border: '2px solid #3a8dde',
+    borderRadius: '6px',
+    cursor: 'pointer',
+    zIndex: 1000,
+    fontWeight: 700
+  });
+  toggleButton.title = "Switch between light and dark themes";
 
-  const idNumber = document.getElementById('idNumber').value;
-  const firstName = document.getElementById('firstName').value;
-  const middleName = document.getElementById('middleName').value;
-  const lastName = document.getElementById('lastName').value;
-  const gender = document.getElementById('gender').value;
-  const birthday = document.getElementById('birthday').value;
+  toggleButton.addEventListener('click', () => {
+    darkMode = !darkMode;
+    toggleButton.setAttribute('aria-pressed', String(darkMode));
 
-  const user = {
-    idNumber,
-    firstName,
-    middleName,
-    lastName,
-    gender,
-    birthday
-  };
+    if (darkMode) {
+      document.body.style.background = '#1f1630';
+      container.style.background = '#2c2c3c';
+      tableSection.style.background = '#241528';
+      heading.style.color = '#fff';
+      tableHeading.style.color = '#fff';
+      labels.forEach(l => l.style.color = '#fff');
+      inputs.forEach(i => { i.style.backgroundColor = '#3a3a3a'; i.style.color = '#fff'; i.style.border = '1px solid #555'; });
+      button.style.backgroundColor = '#555';
+      button.style.color = '#fff';
+      toggleButton.textContent = 'Light Mode';
+      toggleButton.style.backgroundColor = '#3a8dde';
+      toggleButton.style.color = '#fff';
+      table.querySelectorAll('th').forEach(th => { th.style.backgroundColor = '#3b2a4a'; th.style.color = '#fff'; });
+      table.querySelectorAll('td').forEach(td => td.style.color = '#f9f9f9');
+    } else {
+      document.body.style.background = 'linear-gradient(to right, #8ebdecff, #115098ff)';
+      container.style.background = '#fff';
+      tableSection.style.background = '#fff';
+      heading.style.color = '#3a8dde';
+      tableHeading.style.color = '#3a8dde';
+      labels.forEach(l => l.style.color = '#000');
+      inputs.forEach(i => { i.style.backgroundColor = '#fff'; i.style.color = '#000'; i.style.border = '1px solid #ccc'; });
+      button.style.backgroundColor = '#3a8dde';
+      button.style.color = '#fff';
+      toggleButton.textContent = 'Dark Mode';
+      toggleButton.style.backgroundColor = '#fff';
+      toggleButton.style.color = '#3a8dde';
+      table.querySelectorAll('th').forEach(th => { th.style.backgroundColor = '#e6f0ff'; th.style.color = '#000'; });
+      table.querySelectorAll('td').forEach(td => td.style.color = '#000');
+    }
+    updateTable();
+  });
 
-  userData.push(user);
+  // initial table render (if any)
   updateTable();
-  this.reset();
 });
-
-function updateTable() {
-  const tbody = document.querySelector('#dataTable tbody');
-  tbody.innerHTML = '';
-
-  userData.forEach(user => {
-    const row = document.createElement('tr');
-    row.innerHTML = `
-      <td>${user.idNumber}</td>
-      <td>${user.firstName}</td>
-      <td>${user.middleName}</td>
-      <td>${user.lastName}</td>
-      <td>${user.gender}</td>
-      <td>${user.birthday}</td>
-    `;
-    tbody.appendChild(row);
-  });
-
-  const tds = tbody.querySelectorAll('td');
-  tds.forEach(td => {
-    td.style.border = '1px solid #ccc';
-    td.style.padding = '0.5rem';
-    td.style.textAlign = 'left';
-    td.style.color = darkMode ? '#f9f9f9ff' : '#000000ff';
-    td.style.fontSize = '0.9rem';
-  });
-}
-
-// Theme toggle button
-const toggleButton = document.getElementById('toggleTheme');
-Object.assign(toggleButton.style, {
-  position: 'fixed',
-  bottom: '20px',
-  right: '20px',
-  padding: '0.6rem 1rem',
-  backgroundColor: '#ffffff',
-  color: '#3a8dde',
-  border: '2px solid #3a8dde',
-  borderRadius: '5px',
-  cursor: 'pointer',
-  fontWeight: 'bold',
-  zIndex: '1000',
-  boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
-  fontSize: '0.9rem'
-});
-toggleButton.title = "Switch between light and dark themes";
-
-let darkMode = false;
-
-toggleButton.addEventListener('click', () => {
-  darkMode = !darkMode;
-
-  if (darkMode) {
-    document.body.style.background = '#382b57ff';
-    container.style.background = '#2c2c3c';
-    tableSection.style.background = '#280e38ff';
-    heading.style.color = '#ffffff';
-    tableHeading.style.color = '#ffffff';
-    labels.forEach(label => label.style.color = '#ffffff');
-    inputs.forEach(input => input.style.backgroundColor = '#f8f8f8ff');
-    button.style.backgroundColor = '#555';
-    button.style.color = '#fff';
-    toggleButton.textContent = 'Light Mode';
-    toggleButton.style.backgroundColor = '#3a8dde';
-    toggleButton.style.color = '#ffffff';
-
-    const ths = table.querySelectorAll('th');
-    const tds = table.querySelectorAll('td');
-    ths.forEach(th => th.style.color = '#2a0b3eff');
-    tds.forEach(td => td.style.color = '#f9f9f9ff');
-  } else {
-    document.body.style.background = 'linear-gradient(to right, #3a8dde, #6fb1fc)';
-    container.style.background = 'white';
-    tableSection.style.background = 'white';
-    heading.style.color = '#3a8dde';
-    tableHeading.style.color = '#3a8dde';
-    labels.for
+// ...existing code...
