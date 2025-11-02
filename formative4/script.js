@@ -100,7 +100,6 @@ birthdayInput.addEventListener('blur', () => {
   birthdayInput.style.transform = 'scale(1)';
 });
 
-saveBtn.style.marginTop = '24px'; // increased spacing from birthday field
 
   // 💾 Save Button
   const saveBtn = document.getElementById('saveBtn');
