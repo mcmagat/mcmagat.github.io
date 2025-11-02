@@ -66,24 +66,31 @@
       font-size: 1rem;
     }
 
-    /* responsive table: horizontal scroll on small screens */
-    .table-section table {
-      width: 100%;
-      border-collapse: collapse;
-      display: block;
-      overflow-x: auto;
-      white-space: nowrap;
-    }
-    .table-section th, .table-section td {
-      border: 1px solid #ddd;
-      padding: 0.5rem;
-      text-align: left;
-    }
-    .table-section th {
-      background: #e6f0ff;
-      font-weight: 600;
-    }
-
+   /* ...existing CSS... */
+/* responsive table: wrapper + real table so columns align */
+.table-section .table-wrap {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  display: table;
+  min-width: 600px; /* allow horizontal scroll on narrow viewports */
+}
+.table-section th,
+.table-section td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+  vertical-align: middle;
+}
+.table-section th {
+  background: #e6f0ff;
+  font-weight: 600;
+}
+/* ...existing CSS... */
     /* Theme toggle button (positioned by JS) */
     #toggleTheme {
       position: fixed;
@@ -142,22 +149,30 @@
       </form>
     </section>
 
+    <!-- ...existing code... -->
     <section class="table-section" aria-labelledby="data-title">
       <h3 id="data-title">Registered Users</h3>
-      <table id="dataTable" aria-describedby="data-title">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>First name</th>
-            <th>Middle Name</th>
-            <th>Last Name</th>
-            <th>Gender</th>
-            <th>Birthday</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+-      <table id="dataTable" aria-describedby="data-title">
+-        <thead>...</thead>
+-        <tbody></tbody>
+-      </table>
++      <div class="table-wrap" aria-hidden="false">
++        <table id="dataTable" aria-describedby="data-title">
++          <thead>
++            <tr>
++              <th>ID</th>
++              <th>First name</th>
++              <th>Middle Name</th>
++              <th>Last Name</th>
++              <th>Gender</th>
++              <th>Birthday</th>
++            </tr>
++          </thead>
++          <tbody></tbody>
++        </table>
++      </div>
     </section>
+<!-- ...existing code... -->
   </main>
 
   <!-- Theme toggle button (script styles this) -->

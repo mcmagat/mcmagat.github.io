@@ -1,4 +1,3 @@
-// ...existing code...
 document.addEventListener('DOMContentLoaded', () => {
   // only set background here — layout handled by CSS for reliable responsiveness
   document.body.style.background = 'linear-gradient(to right, #8ebdecff, #115098ff)';
@@ -41,12 +40,27 @@ document.addEventListener('DOMContentLoaded', () => {
   button.addEventListener('mouseover', () => button.style.backgroundColor = '#2f76c3');
   button.addEventListener('mouseout', () => button.style.backgroundColor = '#3a8dde');
 
-  // Table basic JS styles (visual only)
+  // Table header styling
   table.querySelectorAll('th').forEach(th => {
     Object.assign(th.style, {
       fontWeight: '600'
     });
   });
+
+  // Table basic styles — keep as a real table; scrolling handled by wrapper
+  Object.assign(table.style, {
+    width: '100%',
+    borderCollapse: 'collapse',
+    display: 'table' // keep table semantics so columns align
+  });
+  // let the .table-wrap handle scrolling (wrapper added in HTML/CSS)
+  const tableWrap = table.closest('.table-wrap');
+  if (tableWrap) {
+    Object.assign(tableWrap.style, {
+      overflowX: 'auto',
+      WebkitOverflowScrolling: 'touch'
+    });
+  }
 
   // Row hover using JS (keeps same behavior)
   table.addEventListener('mouseover', e => {
@@ -165,4 +179,3 @@ document.addEventListener('DOMContentLoaded', () => {
   // initial render
   updateTable();
 });
-// ...existing code...
