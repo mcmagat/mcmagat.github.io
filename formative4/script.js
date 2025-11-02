@@ -3,15 +3,15 @@ const userDataList = [];
 
 // ✅ Apply base styles with light blue palette
 document.body.style.fontFamily = 'Arial, sans-serif';
-document.body.style.padding = '30px';
-document.body.style.margin = '8px';
+document.body.style.padding = '20px';
+document.body.style.margin = '32px'; // Slightly reduced margin for better laptop fit
 document.body.style.backgroundColor = '#e6f2ff';
 document.body.style.transition = 'background-color 0.5s ease';
 
 // 🎨 Headings
 const heading2 = document.querySelector('h2');
 heading2.style.color = '#005b96';
-heading2.style.fontSize = '100px';
+heading2.style.fontSize = '28px';
 heading2.style.transition = 'transform 0.3s ease';
 heading2.addEventListener('mouseover', () => heading2.style.transform = 'scale(1.05)');
 heading2.addEventListener('mouseout', () => heading2.style.transform = 'scale(1)');
@@ -27,12 +27,12 @@ heading3.addEventListener('mouseout', () => heading3.style.transform = 'scale(1)
 // 🎨 Form styling
 const form = document.getElementById('signupForm');
 form.style.backgroundColor = '#ffffff';
-form.style.padding = '100px';
+form.style.padding = '15px';
 form.style.borderRadius = '8px';
 form.style.boxShadow = '0 0 10px rgba(0,0,0,0.1)';
 form.style.marginBottom = '20px';
-form.style.maxWidth = '900px';
-form.style.margin = '0 auto';
+form.style.maxWidth = '800px'; // Wider form for laptop screens
+form.style.margin = '0 auto';  // Center the form horizontally
 
 // 🎨 Labels and inputs
 const labels = form.querySelectorAll('label');
