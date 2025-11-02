@@ -1,62 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Interactive Sign Up Form</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #3a8dde, #6fb1fc);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #3a8dde;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 0.7rem;
+      background-color: #3a8dde;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2f76c3;
+    }
+
+    table {
+      margin-top: 2rem;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    th {
+      background-color: #e6f0ff;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <label for="idNumber">ID Number</label>
+      <input type="text" id="idNumber" required />
 
-  <h2>Sign Up Form</h2>
-  <form id="signupForm">
-    <label>ID Number:
-      <input type="text" id="idNumber" required>
-    </label>
-    <label>First Name:
-      <input type="text" id="firstName" required>
-    </label>
-    <label>Middle Name:
-      <input type="text" id="middleName">
-    </label>
-    <label>Last Name:
-      <input type="text" id="lastName" required>
-    </label>
-    <label>Gender:
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" required />
+
+      <label for="middleName">Middle Name</label>
+      <input type="text" id="middleName" />
+
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" required />
+
+      <label for="gender">Gender</label>
       <select id="gender" required>
         <option value="">Select</option>
-        <option>Male</option>
-        <option>Female</option>
-        <option>Other</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
       </select>
-    </label>
-    <label>Birthday:
-      <input type="date" id="birthday" required>
-    </label>
-    <button type="button" id="saveBtn">Save</button>
-  </form>
 
-  <button id="toggleThemeBtn">Switch Mode</button>
+      <label for="birthday">Birthday</label>
+      <input type="date" id="birthday" required />
 
-  <h3>Submitted Data</h3>
-<table id="dataTable">
-  <thead>
-    <tr>
-      <th>ID Number</th>
-      <th>First Name</th>
-      <th>Middle Name</th>
-      <th>Last Name</th>
-      <th>Gender</th>
-      <th>Birthday</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- This can be empty or contain a placeholder row -->
-    <tr>
-      <td colspan="6" style="text-align:center; color:#888;">No data submitted yet</td>
-    </tr>
-  </tbody>
-</table>
+      <button type="submit">Save</button>
+    </form>
 
-
-  <script src="script.js"></script>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>ID Number</th>
+          <th>First Name</th>
+          <th>Middle Name</th>
+          <th>Last Name</th>
+          <th>Gender</th>
+          <th>Birthday</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
 </body>
 </html>
