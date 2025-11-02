@@ -183,9 +183,9 @@ toggleButton.addEventListener('click', () => {
   darkMode = !darkMode;
 
   if (darkMode) {
-    document.body.style.background = '#1e1e2f';
+    document.body.style.background = '#382b57ff';
     container.style.background = '#2c2c3c';
-    tableSection.style.background = '#2c2c3c';
+    tableSection.style.background = '#280e38ff';
     heading.style.color = '#ffffff';
     tableHeading.style.color = '#ffffff';
     labels.forEach(label => label.style.color = '#ffffff');
