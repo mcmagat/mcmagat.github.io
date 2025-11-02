@@ -1,147 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign Up Form</title>
-  <script defer src="script.js"></script>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #3a8dde, #6fb1fc);
-      margin: 0;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .container {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      width: 100%;
-      max-width: 400px;
-    }
-
-    h2 {
-      text-align: center;
-      color: #3a8dde;
-    }
-
-    label {
-      display: block;
-      margin-top: 1rem;
-      font-weight: bold;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.3rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    button {
-      margin-top: 1.5rem;
-      width: 100%;
-      padding: 0.7rem;
-      background-color: #3a8dde;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #2f76c3;
-    }
-
-    .table-section {
-      background: white;
-      margin-top: 3rem;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.05);
-      width: 100%;
-      max-width: 800px;
-    }
-
-    .table-section h3 {
-      color: #3a8dde;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    th, td {
-      border: 1px solid #ccc;
-      padding: 0.5rem;
-      text-align: center;
-    }
-
-    th {
-      background-color: #e6f0ff;
-    }
-
-    tr:hover {
-      background-color: #f0f8ff;
-    }
-  </style>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Sign Up Form</title>
+ <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="container">
-    <h2>Sign Up</h2>
-    <form id="signupForm">
-      <label for="idNumber">ID Number</label>
-      <input type="text" id="idNumber" required />
+ <div class="container">
+   <h2>Sign Up</h2>
+   <form id="signupForm">
+     <label for="idNumber">ID Number</label>
+     <input type="text" id="idNumber" required />
 
-      <label for="firstName">First Name</label>
-      <input type="text" id="firstName" required />
 
-      <label for="middleName">Middle Name</label>
-      <input type="text" id="middleName" />
+     <label for="firstName">First Name</label>
+     <input type="text" id="firstName" required />
 
-      <label for="lastName">Last Name</label>
-      <input type="text" id="lastName" required />
 
-      <label for="gender">Gender</label>
-      <select id="gender" required>
-        <option value="">Select</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Other">Other</option>
-      </select>
+     <label for="middleName">Middle Name</label>
+     <input type="text" id="middleName" />
 
-      <label for="birthday">Birthday</label>
-      <input type="date" id="birthday" required />
 
-      <button type="submit">Save</button>
-    </form>
-  </div>
+     <label for="lastName">Last Name</label>
+     <input type="text" id="lastName" required />
 
-  <div class="table-section">
-    <h3>Submitted Data</h3>
-    <table id="dataTable">
-      <thead>
-        <tr>
-          <th>ID Number</th>
-          <th>First Name</th>
-          <th>Middle Name</th>
-          <th>Last Name</th>
-          <th>Gender</th>
-          <th>Birthday</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
+
+     <label for="gender">Gender</label>
+     <select id="gender" required>
+       <option value="">Select</option>
+       <option value="Male">Male</option>
+       <option value="Female">Female</option>
+       <option value="Other">Other</option>
+     </select>
+
+
+     <label for="birthday">Birthday</label>
+     <input type="date" id="birthday" required />
+
+
+     <button type="submit">Save</button>
+   </form>
+ </div>
+
+
+ <div class="table-section">
+   <h3>Submitted Data</h3>
+   <table id="dataTable">
+     <thead>
+       <tr>
+         <th>ID Number</th>
+         <th>First Name</th>
+         <th>Middle Name</th>
+         <th>Last Name</th>
+         <th>Gender</th>
+         <th>Birthday</th>
+       </tr>
+     </thead>
+     <tbody></tbody>
+   </table>
+ </div>
 </body>
 </html>
