@@ -1,5 +1,5 @@
 document.body.style.fontFamily = 'Segoe UI, sans-serif';
-document.body.style.background = 'linear-gradient(to right, #3a8dde, #6fb1fc)';
+document.body.style.background = 'linear-gradient(to right, #8ebdecff, #115098ff)';
 document.body.style.margin = '0';
 document.body.style.padding = '2rem';
 document.body.style.display = 'flex';
@@ -152,7 +152,6 @@ function updateTable() {
     tbody.appendChild(row);
   });
 
-  // Reapply cell styling
   const tds = tbody.querySelectorAll('td');
   tds.forEach(td => {
     td.style.border = '1px solid #ccc';
@@ -161,7 +160,6 @@ function updateTable() {
   });
 }
 
-// Style and position the theme toggle button
 const toggleButton = document.getElementById('toggleTheme');
 Object.assign(toggleButton.style, {
   position: 'fixed',
