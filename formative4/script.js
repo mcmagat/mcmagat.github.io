@@ -4,7 +4,7 @@ const userDataList = [];
 // ✅ Apply base styles with light blue palette
 document.body.style.fontFamily = 'Arial, sans-serif';
 document.body.style.padding = '20px';
-document.body.style.margin = '40px';
+document.body.style.margin = '24px';
 document.body.style.backgroundColor = '#e6f2ff';
 document.body.style.transition = 'background-color 0.5s ease';
 
