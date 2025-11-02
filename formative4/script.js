@@ -1,4 +1,3 @@
-// ...existing code...
 document.addEventListener('DOMContentLoaded', () => {
   // Base layout
   document.body.style.background = 'linear-gradient(to right, #8ebdecff, #115098ff)';
@@ -17,13 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.getElementById('toggleTheme');
   const signupForm = document.getElementById('signupForm');
 
-  // Safety check
   if (!container || !tableSection || !table || !toggleButton || !signupForm) {
     console.error('Missing required elements: .container, .table-section, #dataTable, #toggleTheme or #signupForm');
     return;
   }
 
-  // Container styles
+  // Container 
   Object.assign(container.style, {
     background: 'white',
     borderRadius: '10px',
@@ -202,7 +200,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // small HTML escape util
   function escapeHtml(str = '') {
     return String(str)
       .replaceAll('&', '&amp;')
@@ -212,7 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
       .replaceAll("'", '&#39;');
   }
 
-  // Theme toggle styling & behavior
   Object.assign(toggleButton.style, {
     position: 'fixed',
     right: '20px',
@@ -269,4 +265,3 @@ document.addEventListener('DOMContentLoaded', () => {
   // initial table render (if any)
   updateTable();
 });
-// ...existing code...
