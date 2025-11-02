@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  // Container 
+  // Container styles
   Object.assign(container.style, {
     background: 'white',
     borderRadius: '10px',
