@@ -1,15 +1,17 @@
 window.addEventListener('DOMContentLoaded', () => {
   const userDataList = [];
 
+  // 🌈 Base styles
   document.body.style.fontFamily = 'Arial, sans-serif';
   document.body.style.padding = '20px';
   document.body.style.margin = '32px';
   document.body.style.backgroundColor = '#e6f2ff';
-  document.body.style.transition = 'background-color 0.5s ease';
+  document.body.style.transition = 'background-color 0.5s ease, color 0.5s ease';
 
+  // 🎯 Headings
   const heading2 = document.querySelector('h2');
   heading2.style.color = '#005b96';
-  heading2.style.fontSize = '28px';
+  heading2.style.fontSize = '32px';
   heading2.style.transition = 'transform 0.3s ease';
   heading2.addEventListener('mouseover', () => heading2.style.transform = 'scale(1.05)');
   heading2.addEventListener('mouseout', () => heading2.style.transform = 'scale(1)');
@@ -22,15 +24,17 @@ window.addEventListener('DOMContentLoaded', () => {
   heading3.addEventListener('mouseover', () => heading3.style.transform = 'scale(1.05)');
   heading3.addEventListener('mouseout', () => heading3.style.transform = 'scale(1)');
 
+  // 🧾 Form styling
   const form = document.getElementById('signupForm');
   form.style.backgroundColor = '#ffffff';
-  form.style.padding = '15px';
-  form.style.borderRadius = '8px';
+  form.style.padding = '20px';
+  form.style.borderRadius = '10px';
   form.style.boxShadow = '0 0 10px rgba(0,0,0,0.1)';
   form.style.marginBottom = '20px';
   form.style.maxWidth = '800px';
   form.style.margin = '0 auto';
 
+  // 🏷️ Labels and Inputs
   const labels = form.querySelectorAll('label');
   labels.forEach(label => {
     label.style.display = 'block';
@@ -63,6 +67,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 💾 Save Button
   const saveBtn = document.getElementById('saveBtn');
   saveBtn.style.marginTop = '15px';
   saveBtn.style.padding = '10px 20px';
@@ -83,6 +88,7 @@ window.addEventListener('DOMContentLoaded', () => {
     saveBtn.style.transform = 'scale(1)';
   });
 
+  // 🌙 Toggle Theme Button
   const toggleBtn = document.getElementById('toggleThemeBtn');
   toggleBtn.style.margin = '10px 0';
   toggleBtn.style.padding = '10px 20px';
@@ -100,8 +106,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const isDark = document.body.style.backgroundColor === 'rgb(30, 30, 30)';
     document.body.style.backgroundColor = isDark ? '#e6f2ff' : '#1e1e1e';
     document.body.style.color = isDark ? '#000' : '#f0f0f0';
+    form.style.backgroundColor = isDark ? '#ffffff' : '#2c2c2c';
+    heading2.style.color = isDark ? '#005b96' : '#66ccff';
+    heading3.style.color = isDark ? '#0074d9' : '#66ccff';
   });
 
+  // 📥 Collect Form Data
   function collectFormData() {
     return {
       idNumber: document.getElementById('idNumber').value,
@@ -113,6 +123,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
   }
 
+  // 💾 Save and Update Table
   function saveData() {
     const newUser = collectFormData();
     userDataList.push(newUser);
@@ -120,6 +131,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.reset();
   }
 
+  // 📊 Update Table
   function updateTable() {
     const tableBody = document.querySelector('#dataTable tbody');
     tableBody.innerHTML = '';
@@ -162,4 +174,15 @@ window.addEventListener('DOMContentLoaded', () => {
       th.style.padding = '12px';
       th.style.border = '1px solid #3399ff';
       th.style.textAlign = 'left';
-      th.style.font
+      th.style.fontSize = '18px';
+      th.style.color = '#005b96';
+      th.style.backgroundColor = '#cce6ff';
+      th.style.transition = 'transform 0.3s ease';
+      th.addEventListener('mouseover', () => th.style.transform = 'scale(1.05)');
+      th.addEventListener('mouseout', () => th.style.transform = 'scale(1)');
+    });
+  }
+
+  // 🧠 Save Button Listener
+  saveBtn.addEventListener('click', saveData);
+});
