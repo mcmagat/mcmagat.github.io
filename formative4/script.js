@@ -74,7 +74,7 @@ Object.assign(tableSection.style, {
  borderRadius: '10px',
  boxShadow: '0 0 15px rgba(0,0,0,0.05)',
  width: '100%',
- maxWidth: '800px'
+ maxWidth: '600px'
 });
 
 
@@ -87,34 +87,23 @@ tableHeading.style.textAlign = 'center';
 // Style table
 const table = document.getElementById('dataTable');
 table.style.width = '100%';
-table.style.maxWidth = '100%';
 table.style.borderCollapse = 'collapse';
-table.style.boxSizing = 'border-box';
-table.style.display = 'block'; // enables horizontal scroll
-table.style.overflowX = 'auto';
-table.style.whiteSpace = 'nowrap'; // prevents cell wrapping
-
-
 
 
 const ths = table.querySelectorAll('th');
 ths.forEach(th => {
-  th.style.border = '1px solid #ccc';
-  th.style.padding = '0.5rem';
-  th.style.textAlign = 'left';
-  th.style.backgroundColor = '#e6f0ff';
-  th.style.color = darkMode ? '#2a0b3eff' : '#000000ff';
-  th.style.fontSize = '0.9rem';
+ th.style.border = '1px solid #ccc';
+ th.style.padding = '0.5rem';
+ th.style.textAlign = 'center';
+ th.style.backgroundColor = '#e6f0ff';
 });
 
 
 const tds = table.querySelectorAll('td');
 tds.forEach(td => {
-   td.style.border = '1px solid #ccc';
-  td.style.padding = '0.5rem';
-  td.style.textAlign = 'left';
-  td.style.color = darkMode ? '#f9f9f9ff' : '#000000ff';
-  td.style.fontSize = '0.9rem';
+ td.style.border = '1px solid #ccc';
+ td.style.padding = '0.5rem';
+ td.style.textAlign = 'center';
 });
 
 
@@ -193,21 +182,19 @@ function updateTable() {
 
 const toggleButton = document.getElementById('toggleTheme');
 Object.assign(toggleButton.style, {
-  position: 'fixed',
-  bottom: '20px',
-  right: '20px',
-  padding: '0.6rem 1rem',
-  backgroundColor: '#ffffff',
-  color: '#3a8dde',
-  border: '2px solid #3a8dde',
-  borderRadius: '5px',
-  cursor: 'pointer',
-  fontWeight: 'bold',
-  zIndex: '1000',
-  boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
-  fontSize: '0.9rem'
+ position: 'fixed',
+ bottom: '20px',
+ right: '20px',
+ padding: '0.6rem 1rem',
+ backgroundColor: '#ffffff',
+ color: '#3a8dde',
+ border: '2px solid #3a8dde',
+ borderRadius: '5px',
+ cursor: 'pointer',
+ fontWeight: 'bold',
+ zIndex: '1000',
+ boxShadow: '0 2px 6px rgba(0,0,0,0.2)'
 });
-
 
 
 
