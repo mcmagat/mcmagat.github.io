@@ -20,6 +20,16 @@ body {
   padding: 0 2rem;
 }
 
+/* Elegant serif for headings to create an art-catalog feel */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  color: #111;
+  letter-spacing: 0.2px;
+}
+
+h1 { font-size: 2.2rem; font-weight: 600; }
+h2 { font-size: 1.8rem; font-weight: 600; }
+
 /* Header */
 header {
   display: flex;
@@ -179,9 +189,12 @@ section:nth-of-type(3) div > div {
 }
 
 section:nth-of-type(3) img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  margin: 0 auto 1.5rem auto;
 }
 
 section:nth-of-type(3) a {
