@@ -12,41 +12,89 @@ body {
     color: #111;
 }
 
-/* Logo lockup */
-.logo { display:flex; align-items:center; }
-.logo-link { text-decoration:none; }
+/* Elegant serif for headings to create an art-catalog feel */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  color: #111;
+  letter-spacing: 0.2px;
+}
 
-.logo-mark { font-family:var(--font-serif); font-size:1.1rem; font-weight:600; letter-spacing:2.5px; color:#0f0f0f; }
+h1 { font-size: 2.2rem; font-weight: 600; }
+h2 { font-size: 1.8rem; font-weight: 600; }
 
+.artist-profile h1 { font-size: 2.4rem; margin-bottom: 0.25rem; }
+
+/* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 0;
-    border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid #ccc;
 }
 
-nav { display:flex; align-items:center; gap:20px; }
+/* Logo lockup */
+.logo {
+  display: flex;
+  align-items: center;
+}
 
-/* refined nav to match homepage: dark action button and light links */
+.logo-link {
+  text-decoration: none;
+}
+
+.logo-mark {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: #0f0f0f;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* Uppercase tracking and subtle underline hover for nav links */
 nav a {
-    text-decoration:none;
-    color: #111;
-    font-weight:600;
-    text-transform:uppercase;
-    letter-spacing:1.6px;
-    font-size:0.95rem;
-    background-image:linear-gradient(currentColor,currentColor);
-    background-position:0 100%; background-repeat:no-repeat; background-size:0% 2px;
-    padding-bottom:2px;
-    font-variant: small-caps;
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  transition: color 0.25s ease, background-size 0.25s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  font-size: 0.9rem;
+  /* animated underline */
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  padding-bottom: 2px;
+  /* typographic refinement: small-caps feel */
+  font-variant: small-caps;
+  -webkit-font-smoothing: antialiased;
 }
 
-nav a:hover { color:var(--accent); background-size:100% 2px; }
+nav a:hover {
+  color: var(--accent);
+  background-size: 100% 2px;
+}
 
-nav button { background-color: #111; color: #fff; border: none; padding:0.5rem 1rem; cursor:pointer; font-weight:600; transition: background 0.3s ease; border-radius:6px; }
-nav button:hover { background-color: var(--accent); }
+nav button {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
 
+nav button:hover {
+  background-color: #c0392b;
+}
 main { padding:20px; }
 
 section { margin-bottom:40px; }
