@@ -145,49 +145,78 @@ nav button:hover {
 
 /* Catalog Section / Grid Gallery */
 .models-catalog {
-  padding: 3rem 0;
+  padding: 4rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .models-catalog h2 {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  margin-bottom: 2.25rem;
   text-align: center;
+  font-weight: 500;
+  color: #0f0f0f;
 }
 
+/* Larger, elegant grid */
 .models-catalog .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  align-items: stretch;
 }
 
 .models-catalog .item {
-  border: 1px solid #eee;
+  position: relative;
   padding: 0;
-  text-align: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: left;
+  transition: transform 0.35s cubic-bezier(.2,.9,.2,1), box-shadow 0.35s ease;
   overflow: hidden;
-  border-radius: 8px;
-  background: #fff;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff 0%, #fbfbfb 100%);
+  box-shadow: 0 6px 18px rgba(15,15,15,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
 }
 
 .models-catalog .item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(15,15,15,0.12);
 }
 
 .models-catalog .item img {
   display: block;
   width: 100%;
-  height: 180px;
+  height: 260px;
   object-fit: cover;
+  transition: transform 0.6s cubic-bezier(.2,.9,.2,1);
 }
 
+.models-catalog .item:hover img {
+  transform: scale(1.06) translateZ(0);
+}
+
+/* Overlay caption for elegant look */
 .models-catalog .item p {
-  padding: 0.75rem 1rem 1rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: 0;
-  color: #333;
+  padding: 1rem 1.25rem;
+  color: #fff;
   font-weight: 600;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.65) 100%);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+  backdrop-filter: blur(2px);
+}
+
+/* optional subtle caption smaller description under the title (if needed) */
+.models-catalog .item .meta {
+  display: block;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+  margin-top: 0.25rem;
 }
 
 /* Footer */
