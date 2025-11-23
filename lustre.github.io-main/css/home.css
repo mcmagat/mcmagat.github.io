@@ -35,8 +35,22 @@ header {
   border-bottom: 1px solid #ccc;
 }
 
-header img {
-  height: 50px;
+/* Logo lockup (text) */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.logo-mark {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: #0f0f0f;
 }
 
 nav ul {
@@ -45,15 +59,27 @@ nav ul {
   list-style: none;
 }
 
+/* Nav: refined uppercase tracking and underline hover to match site theme */
 nav a {
   text-decoration: none;
   color: #111;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  transition: color 0.25s ease, background-size 0.25s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  font-size: 0.9rem;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  padding-bottom: 2px;
+  font-variant: small-caps;
+  -webkit-font-smoothing: antialiased;
 }
 
 nav a:hover {
-  color: #c0392b;
+  color: var(--accent);
+  background-size: 100% 2px;
 }
 
 nav button {

@@ -1,8 +1,21 @@
+:root {
+    --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-serif: 'Cormorant Garamond', 'Playfair Display', 'Georgia', serif;
+    --accent: #c0392b;
+    --muted: #666;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-sans);
     margin: 0;
     padding: 0;
+    color: #111;
 }
+
+/* Logo lockup */
+.logo { display:flex; align-items:center; }
+.logo-link { text-decoration:none; }
+.logo-mark { font-family:var(--font-serif); font-size:1.4rem; font-weight:600; letter-spacing:2.5px; color:#0f0f0f; }
 
 header {
     display: flex;
@@ -13,69 +26,34 @@ header {
     padding: 15px 30px;
 }
 
-header h1 {
-    margin: 0;
+nav { display:flex; align-items:center; gap:20px; }
+
+/* refined nav: uppercase tracking, animated underline; color inherits so it works on dark headers */
+nav a {
+    text-decoration:none;
+    color: inherit;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1.6px;
+    font-size:0.95rem;
+    background-image:linear-gradient(currentColor,currentColor);
+    background-position:0 100%; background-repeat:no-repeat; background-size:0% 2px;
+    padding-bottom:2px;
+    font-variant: small-caps;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
+nav a:hover { color:var(--accent); background-size:100% 2px; }
 
-nav a, nav button, nav span {
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    text-decoration: none;
-}
+nav button { border:1px solid currentColor; padding:6px 12px; border-radius:6px; background:none; color:inherit; }
+nav button:hover { background:var(--accent); color:#fff; }
 
-nav button {
-    border: 1px solid white;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
+main { padding:20px; }
 
-nav button:hover {
-    background-color: white;
-    color: black;
-}
+section { margin-bottom:40px; }
 
-main {
-    padding: 20px;
-}
+.artworks { display:flex; gap:20px; }
+.art-card { border:1px solid #ccc; padding:10px; text-align:center; width:200px; }
 
-section {
-    margin-bottom: 40px;
-}
-
-.artworks {
-    display: flex;
-    gap: 20px;
-}
-
-.art-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    width: 200px;
-}
-
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-footer i {
-    margin: 0 10px;
-    font-size: 20px;
-    color: white;
-}
-
-footer i:hover {
-    color: gold;
-}
+footer { background-color:black; color:white; text-align:center; padding:20px; }
+footer i { margin:0 10px; font-size:20px; color:white; }
+footer i:hover { color:gold; }
