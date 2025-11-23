@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lustre | Graphic Designs</title>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- css link -->
+     <link rel="stylesheet" href="css/log-in.css">
+</head>
+
+<body>
+    <header>
+        <img src="" alt="LUSTRE logo">
+        <!-- pwede rin yung ano parang text lang na logo -->
+        <nav>
+            <a href="home.html">HOME</a>
+            <a href="graphic-designs.html">GRAPHIC DESIGNS</a>
+            <a href="3d-models.html">3D MODELS</a>
+            <a href="2d-animations.html">2D ANIMATIONS</a>
+            <button onclick="window.location.href='sign-up.html'">SIGN UP</button>
+        </nav>
+    </header>
+
+    <main>
+<!-- SIGN UP FORM -->
+        <section class="fillupform">
+            <h2>SIGN UP</h2>
+            <div>  
+                <label for="email">E-MAIL</label>
+                <input type="text" name="email" id="email">
+                <p class="error" id="passwordError"></p>
+            </div>
+            <div>  
+                <label for="password">PASSWORD</label>
+                <input type="text" name="password" id="password">
+                <p class="error" id="passwordError"></p>
+            </div>
+            <div>
+                <button type="button" id="login">LOG IN</button>
+            </div>
+        </section>
+
+<!-- hidden by default. pakita lang if nag fill in correctly user sa sign up form -->
+        <section class="signedup">
+            <h2>Logging in!</h2>
+            <p>Redirecting you to home page...</p>
+        </section>
+    </main>
+
+    <footer> <!-- contacts and copyright -->
+        <h2>FOLLOW US</h2>
+            <a href="https://facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://x.com" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://tiktok.com" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <p>&copy; 2025 Lustre. All rights reserved.</p>
+    </footer>
+</body>
+</html>
