@@ -15,23 +15,23 @@ body {
 /* Logo lockup */
 .logo { display:flex; align-items:center; }
 .logo-link { text-decoration:none; }
-.logo-mark { font-family:var(--font-serif); font-size:1.4rem; font-weight:600; letter-spacing:2.5px; color:#0f0f0f; }
+
+.logo-mark { font-family:var(--font-serif); font-size:1.1rem; font-weight:600; letter-spacing:2.5px; color:#0f0f0f; }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
-    color: white;
-    padding: 15px 30px;
+    padding: 2rem 0;
+    border-bottom: 1px solid #ccc;
 }
 
 nav { display:flex; align-items:center; gap:20px; }
 
-/* refined nav: uppercase tracking, animated underline; color inherits so it works on dark headers */
+/* refined nav to match homepage: dark action button and light links */
 nav a {
     text-decoration:none;
-    color: inherit;
+    color: #111;
     font-weight:600;
     text-transform:uppercase;
     letter-spacing:1.6px;
@@ -44,8 +44,8 @@ nav a {
 
 nav a:hover { color:var(--accent); background-size:100% 2px; }
 
-nav button { border:1px solid currentColor; padding:6px 12px; border-radius:6px; background:none; color:inherit; }
-nav button:hover { background:var(--accent); color:#fff; }
+nav button { background-color: #111; color: #fff; border: none; padding:0.5rem 1rem; cursor:pointer; font-weight:600; transition: background 0.3s ease; border-radius:6px; }
+nav button:hover { background-color: var(--accent); }
 
 main { padding:20px; }
 
