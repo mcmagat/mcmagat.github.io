@@ -1,3 +1,35 @@
+html {
+  scroll-behavior: smooth;
+}
+/* Back to Top Button Styles */
+.back-to-top-container {
+  position: fixed;
+  right: 2.5rem;
+  bottom: 2.5rem;
+  z-index: 100;
+}
+
+.back-to-top-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: #111;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s;
+  text-decoration: none;
+}
+
+.back-to-top-btn:hover {
+  background: #c0392b;
+  transform: translateY(-4px) scale(1.08);
+}
 /* Reset & Base */
 * {
   margin: 0;
@@ -37,6 +69,10 @@ header {
   align-items: center;
   padding: 2rem 0;
   border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
 }
 
 /* Logo lockup (text) */
