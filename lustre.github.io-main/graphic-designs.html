@@ -8,20 +8,13 @@
     <!-- icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- elegant fonts (shared) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
     <!-- css link -->
      <link rel="stylesheet" href="css/graphic-designs.css">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <a href="home.html" class="logo-link" aria-label="Lustre Home">
-                <span class="logo-mark">LUSTRE</span>
-            </a>
-        </div>
+    <header id="header">
+        <img src="" alt="LUSTRE logo">
         <!-- pwede rin yung ano parang text lang na logo -->
         <nav>
             <a href="home.html">HOME</a>
@@ -34,7 +27,7 @@
 
     <main>
         <section class="artist-profile">
-            <img src="" alt="Ianne Dela Cruz">
+            <img src="gd-media/iannedelacruz.jpeg" alt="Ianne Dela Cruz">
             <h1>Ianne Dela Cruz</h1>
             <p>Graphic Designer, 20 years old</p>
             <p>I am a second year multimedia arts student specializing in graphic design. I use Canva, Photoshop, and Procreate for my outputs. I started practicing graphic design at the age of 10 and I am still honing my skills and looking for more opportunities to learn up until now.</p>
@@ -45,44 +38,69 @@
             <i class="fa-brands fa-instagram"></i>
             </a>
         </section>
-        <section class="gd-catalog models-catalog">
+        <section class="gd-catalog">
             <h2>CATALOG</h2>
-            <div class="grid">
-                <div class="item">
-                    <img src="gd-media/FRESHIES GOT TALENT.jpg" alt="FRESHIES GOT TALENT Pubmat">
-                    <p>"FRESHIES GOT TALENT" Pubmat</p>
-                </div>
-                <div class="item">
-                    <img src="gd-media/FSOC_TEACHERS_DAY.png" alt="FSOC Teachers' Day Poster">
-                    <p>FSOC Teachers' Day Poster</p>
-                </div>
-                <div class="item">
-                    <img src="gd-media/HUE-nited main pubmat.png" alt="HUE-nited Pubmat">
-                    <p>"HUE-nited" Pubmat</p>
-                </div>
-                <div class="item">
-                    <img src="gd-media/PRISM  Chills and Thrills.png" alt="Chills and Thrills Pubmat">
-                    <p>"Chills and Thrills" Pubmat</p>
-                </div>
-                <div class="item">
-                    <img src="gd-media/PRISM - All Saints_ Day.png" alt="All Saints' Day Pubmat">
-                    <p>All Saints' Day Pubmat</p>
-                </div>
-                <div class="item">
-                    <img src="gd-media/PRISM - Happy World Teachers_ Day.png" alt="World Teachers' Day Pubmat">
-                    <p>World Teachers' Day Pubmat</p>
-                </div>
-                <div class="item">
-                    <img src="gd-media/PRISM LOGO.png" alt="PRISM Logo">
-                    <p>"PRISM" Logo</p>
-                </div>
-                <div class="item">
-                    <img src="gd-media/RSO FAIR.jpg" alt="Student Organizations Fair Pubmat">
-                    <p>"Student Organizations Fair" Pubmat</p>
-                </div>
-                <!-- Add more artwork items as needed -->
+            <div>
+                <img src="gd-media/FRESHIES GOT TALENT.jpg" alt="FRESHIES GOT TALENT Pubmat">
+                <p>"FRESHIES GOT TALENT" Pubmat</p>
             </div>
+            <div>
+                <img src="gd-media/FSOC_TEACHERS_DAY.png" alt="FSOC Teachers' Day Poster">
+                <p>FSOC Teachers' Day Poster</p>
+            </div>
+            <div>
+                <img src="gd-media/HUE-nited main pubmat.png" alt="HUE-nited Pubmat">
+                <p>"HUE-nited" Pubmat</p>
+            </div>
+            <div>
+                <img src="gd-media/PRISM  Chills and Thrills.png" alt="Chills and Thrills Pubmat">
+                <p>"Chills and Thrills" Pubmat</p>
+            </div>
+            <div>
+                <img src="gd-media/PRISM - All Saints_ Day.png" alt="All Saints' Day Pubmat">
+                <p>All Saints' Day Pubmat</p>
+            </div>
+            <div>
+                <img src="gd-media/PRISM - Happy World Teachers_ Day.png" alt="World Teachers' Day Pubmat">
+                <p>World Teachers' Day Pubmat</p>
+            </div>
+            <div>
+                <img src="gd-media/PRISM LOGO.png" alt="PRISM Logo">
+                <p>"PRISM" Logo</p>
+            </div>
+            <div>
+                <img src="gd-media/RSO FAIR.jpg" alt="Student Organizations Fair Pubmat">
+                <p>"Student Organizations Fair" Pubmat</p>
+            </div>
+            <!-- Add more artwork items as needed -->
         </section>
+        
+        <aside id="popupOverlay" class="overlay">
+            <dialog class="popup-content" open>
+                <button id="closePopup" class="close">&times;</button>
+
+                <div class="media-container">
+                    <img id="popupImage" alt="">
+                </div>
+
+                <aside class="comment-panel">
+                    <h3>Comments</h3>
+                    <div id="commentList" class="comment-list"></div>
+
+                    <div class="add-comment">
+                        <textarea id="commentInput" placeholder="Add a comment..."></textarea>
+                        <button id="postComment">Post</button>
+                    </div>
+                </aside>
+            </dialog>
+        </aside>
+
+
+        <div>
+            <a href="#header">
+                <button>BACK TO TOP <i class="fa-solid fa-chevron-up"></i></button>
+            </a>
+        </div>
     </main>
 
     <footer> <!-- contacts and copyright of lustre -->
