@@ -12,7 +12,7 @@
      <link rel="stylesheet" href="css/home.css">
 </head>
 
-<body id="top">
+<body>
     <header>
         <!-- Serif logo lockup (text) for an elegant catalog feel -->
         <div class="logo">
@@ -26,41 +26,58 @@
             <a href="graphic-designs.html">GRAPHIC DESIGNS</a>
             <a href="3d-models.html">3D MODELS</a>
             <a href="2d-animations.html">2D ANIMATIONS</a>
-            <button onclick="window.location.href='sign-up.html'">SIGN UP</button>
+            <button class="signup-blue" onclick="window.location.href='sign-up.html'">SIGN UP</button>
         </nav>
     </header>
 
+    <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>WELCOME TO LUSTRE</h1>
+      <p>At LUSTRE, we spotlight both emerging and established artists, bringing their creativity into one vibrant and accessible space. Each artwork in our catalog reflects unique perspectives, bold ideas, and expressive storytelling. Dive in and experience a place where artistry thrives and imagination takes center stage..</p>
+    </div>
+  </section>
+
     <main>
-        <section>
-            <h3>WELCOME TO</h3>
-            <img src="" alt="LUSTRE logo">
-            <p>At LUSTRE, we spotlight both emerging and established artists, bringing their creativity into one vibrant and accessible space. Each artwork in our catalog reflects unique perspectives, bold ideas, and expressive storytelling. Dive in and experience a place where artistry thrives and imagination takes center stage.</p>
-        </section>
-        <section> <!-- latest artworks -->
-            <h2>LATEST ARTWORKS</h2>
-            <div>
-                <div>
-                    <img src="gd-media/HUE-nited main pubmat.png" alt="HUE-nited Pubmat">
-                    <p>"HUE-nited" Pubmat</p>
-                    <p>Graphic Design</p>
-                </div>
-                <div>
-                    <img src="3d-media/UMBRA VALE RENDERED.jpg" alt="Umbra Vale 3D Model">
-                    <p>"UMBRA VALE"</p>
-                    <p>Maria Beatrice Magat, 3D Model</p>
-                </div>
-                <div>
-                    <video autoplay loop muted>
-                        <source src="2d-media/FinalDraft_PAULIN.mp4" type="video/mp4">
-                    </video>
-                    <p>"The Taste Of Home"</p>
-                    <p>Jonah Paulin, 2D Animation</p>
-                </div>
-            </div>
-        </section>
-        <section>
-            <h2>FEATURED ARTISTS</h2>
-            <div>
+        <section class="latest-artworks-carousel">
+  <h2>LATEST ARTWORKS</h2>
+  <div class="carousel-wrapper">
+    <button class="carousel-btn left" aria-label="Scroll Left">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div class="carousel-track">
+      <div class="carousel-item">
+        <img src="gd-media/HUE-nited main pubmat.png" alt="HUE-nited Pubmat">
+        <p>"HUE-nited" Pubmat</p>
+        <p>Graphic Design</p>
+      </div>
+      <div class="carousel-item">
+        <img src="3d-media/UMBRA VALE RENDERED.jpg" alt="Umbra Vale 3D Model">
+        <p>"UMBRA VALE"</p>
+        <p>Maria Beatrice Magat, 3D Model</p>
+      </div>
+      <div class="carousel-item">
+        <video autoplay loop muted>
+          <source src="2d-media/FinalDraft_PAULIN.mp4" type="video/mp4">
+        </video>
+        <p>"The Taste Of Home"</p>
+        <p>Jonah Paulin, 2D Animation</p>
+      </div>
+    </div>
+
+    <button class="carousel-btn right" aria-label="Scroll Right">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+</section>
+
+
+
+
+        <section class="featured-artists">
+  <h2>FEATURED ARTISTS</h2>
+  <div class="artist-grid">
                 <div>
                     <img src="gd-media/iannedelacruz.jpeg" alt="Ianne Dela Cruz">
                     <p>Ianne Dela Cruz</p>
@@ -81,15 +98,16 @@
                 </div>
             </div>
         </section>
-        
-        <!-- Back to Top Button: fixed bottom right -->
-        <div class="back-to-top-container">
-            <a href="#top" class="back-to-top-btn" aria-label="Back to Top">
-                <i class="fa-solid fa-chevron-up"></i>
-            </a>
-        </div>
-    </main>
-
+  </div>
+</section>
+            
+            
+    <!-- Back to Top Button: fixed bottom right -->
+    <div class="back-to-top-container">
+        <a href="#top" class="back-to-top-btn" aria-label="Back to Top">
+            <i class="fa-solid fa-chevron-up"></i>
+        </a>
+    </div>
     <footer> <!-- contacts and copyright -->
         <h2>FOLLOW US</h2>
             <a href="https://facebook.com" target="_blank">
@@ -109,6 +127,25 @@
             </a>
             <p>&copy; 2025 Lustre. All rights reserved.</p>
     </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const btnLeft = document.querySelector('.carousel-btn.left');
+    const btnRight = document.querySelector('.carousel-btn.right');
+
+    if (track && btnLeft && btnRight) {
+      btnLeft.addEventListener('click', () => {
+        track.scrollBy({ left: -320, behavior: 'smooth' });
+      });
+
+      btnRight.addEventListener('click', () => {
+        track.scrollBy({ left: 320, behavior: 'smooth' });
+      });
+    }
+  });
+</script>
+
 </body>
 
 <!-- javascript link -->

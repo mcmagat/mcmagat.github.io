@@ -1,12 +1,20 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
-    --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    --font-serif: 'Cormorant Garamond', 'Playfair Display', 'Georgia', serif;
-    --accent: #c0392b;
-    --muted: #666;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', 'Georgia', serif;
+  --accent: #0d3fab; /* Lustre blue */
+  --muted: #666;
+  --border: #ddd;
+  --bg-light: #f9f9f9;
 }
 
 body {
-  /* Body uses a clean sans-serif for readability */
   font-family: var(--font-sans);
   background-color: #fff;
   color: #111;
@@ -14,17 +22,19 @@ body {
   padding: 0 2rem;
 }
 
-/* Elegant serif for headings to create an art-catalog feel */
+/* Headings */
 h1, h2, h3 {
   font-family: var(--font-serif);
   color: #111;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.5px;
 }
 
-h1 { font-size: 2.2rem; font-weight: 600; }
-h2 { font-size: 1.8rem; font-weight: 600; }
-
-.artist-profile h1 { font-size: 2.4rem; margin-bottom: 0.25rem; }
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
 
 /* Header */
 header {
@@ -98,43 +108,188 @@ nav button {
   transition: background 0.3s ease;
 }
 
+.signup-blue {
+  background-color: #0d3fab !important;
+  color: #fff !important;
+  border: none;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+}
+.signup-blue:hover {
+  background-color: #071e54 !important;
+}
+
 nav button:hover {
-  background-color: #c0392b;
+  background-color: #0d3fab;
 }
 
-main {
-    padding: 20px;
+/* Log In Form */
+.fillupform {
+  max-width: 500px;
+  margin: 4rem auto;
+  background: var(--bg-light);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
 }
 
-section {
-    margin-bottom: 40px;
+.fillupform div {
+  margin-bottom: 1.5rem;
 }
 
-.artworks {
-    display: flex;
-    gap: 20px;
+.social-login {
+  text-align: center;
+  margin-top: 2rem;
 }
 
-.art-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    width: 200px;
+.social-login p {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+  font-family: var(--font-serif);
 }
 
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin: 0.3rem;
+}
+
+.social-btn i {
+  font-size: 1.1rem;
+}
+
+.social-btn.google {
+  background-color: #db4437;
+}
+
+.social-btn.google:hover {
+  background-color: #a33228;
+}
+
+.social-btn.apple {
+  background-color: #111;
+}
+
+.social-btn.apple:hover {
+  background-color: #333;
+}
+
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-family: var(--font-serif);
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  background: #fff;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.error {
+  font-size: 0.85rem;
+  color: #c0392b;
+  margin-top: 0.25rem;
+}
+
+/* Log In Button */
+#login {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#login:hover {
+  background-color: #071e54;
+}
+
+/* Success Message */
+.signedup {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+  background: #e6f0ff;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.signedup h2 {
+  color: var(--accent);
+}
+
+/* Footer */
 footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 20px;
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 4rem;
 }
 
-footer i {
-    margin: 0 10px;
-    font-size: 20px;
-    color: white;
+footer h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
-footer i:hover {
-    color: gold;
+footer a {
+  margin: 0 0.5rem;
+  color: #111;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
+
+footer a:hover {
+  color: var(--accent);
+}
+
+footer p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .fillupform {
+    padding: 1.5rem;
+  }
+
+  input {
+    font-size: 0.95rem;
+  }
+
+  #login {
+    width: 100%;
+  }
+}
+

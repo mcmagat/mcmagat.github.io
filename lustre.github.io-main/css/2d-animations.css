@@ -41,7 +41,7 @@ html {
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   /* swapped serif to Cormorant Garamond for a refined art-catalog aesthetic */
   --font-serif: 'Cormorant Garamond', 'Playfair Display', 'Georgia', serif;
-  --accent: #c0392b;
+  --accent: #0d3fab;
   --muted: #666;
 }
 
@@ -137,9 +137,18 @@ nav button {
   font-weight: 600;
   transition: background 0.3s ease;
 }
+.signup-blue {
+  background-color: #0d3fab !important;
+  color: #fff !important;
+  border: none;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+}
+.signup-blue:hover {
+  background-color: #071e54 !important;
+}
 
 nav button:hover {
-  background-color: #c0392b;
+  background-color: #0d3fab;
 }
 
 /* Artist Profile */
