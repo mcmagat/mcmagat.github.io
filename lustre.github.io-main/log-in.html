@@ -1,92 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lustre | Graphic Designs</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lustre | Log In</title>
 
-    <!-- icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <!-- icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- elegant fonts (shared) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <!-- fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- css link -->
-     <link rel="stylesheet" href="css/log-in.css">
+   <!-- css links -->
+   <link rel="stylesheet" href="css/universal.css">
+   <link rel="stylesheet" href="css/log-in.css">
 </head>
 
-<body>
-    <header>
-        <!-- Serif logo lockup (text) for an elegant catalog feel -->
-        <div class="logo">
-            <a href="home.html" class="logo-link" aria-label="Lustre Home">
-                <span class="logo-mark">LUSTRE</span>
-            </a>
-        </div>
-        <!-- pwede rin yung ano parang text lang na logo -->
+<body id="top">
+   <header>
+       <div class="logo">
+           <a href="home.html" class="logo-link" aria-label="Lustre Home">
+               <span class="logo-mark">LUSTRE</span>
+           </a>
+       </div>
         <nav>
+            <button class="close-nav" id="closeNav" aria-label="Close Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
             <a href="home.html">HOME</a>
             <a href="graphic-designs.html">GRAPHIC DESIGNS</a>
             <a href="3d-models.html">3D MODELS</a>
             <a href="2d-animations.html">2D ANIMATIONS</a>
             <button class="signup-blue" onclick="window.location.href='sign-up.html'">SIGN UP</button>
         </nav>
-    </header>
+        <button class="burger" id="burgerButton" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+   </header>
 
-    <main>
-<!-- SIGN UP FORM -->
-        <section class="fillupform">
-            <h2>SIGN IN</h2>
-            <div>  
-                <label for="email">E-MAIL</label>
-                <input type="text" name="email" id="email">
-                <p class="error" id="passwordError"></p>
-            </div>
-            <div>  
-                <label for="password">PASSWORD</label>
-                <input type="text" name="password" id="password">
-                <p class="error" id="passwordError"></p>
-            </div>
-            <div>
-                <button type="button" id="login">LOG IN</button>
-            </div>
-            <div class="social-login">
-  <p>Or log in with:</p>
-  <button class="social-btn google">
-    <i class="fa-brands fa-google"></i> Google
-  </button>
-  <button class="social-btn apple">
-    <i class="fa-brands fa-apple"></i> Apple
-  </button>
-</div>
+   <main>
+       <!-- LOG IN FORM -->
+       <section class="fillupform">
+           <h2>SIGN IN</h2>
+           <div> 
+               <label for="email">E-MAIL</label>
+               <input type="text" name="email" id="email">
+               <p class="error" id="emailError"></p>
+           </div>
+           <div> 
+               <label for="password">PASSWORD</label>
+               <input type="password" name="password" id="password">
+               <p class="error" id="passwordError"></p>
+           </div>
+           <div>
+               <button type="button" id="login">LOG IN</button>
+           </div>
+           <div class="social-login">
+               <p>Or log in with:</p>
+               <button class="social-btn google">
+                   <i class="fa-brands fa-google"></i> Google
+               </button>
+               <button class="social-btn apple">
+                   <i class="fa-brands fa-apple"></i> Apple
+               </button>
+           </div>
+       </section>
 
-        </section>
+       <!-- SUCCESS MESSAGE -->
+       <section class="signedup">
+           <h2>Logging in!</h2>
+           <p>Redirecting you to home page...</p>
+       </section>
+   </main>
 
-<!-- hidden by default. pakita lang if nag fill in correctly user sa sign up form -->
-        <section class="signedup">
-            <h2>Logging in!</h2>
-            <p>Redirecting you to home page...</p>
-        </section>
-    </main>
+   <footer>
+       <h2>FOLLOW US</h2>
+       <a href="https://facebook.com" target="_blank">
+           <i class="fa-brands fa-facebook"></i>
+       </a>
+       <a href="https://instagram.com" target="_blank">
+           <i class="fa-brands fa-instagram"></i>
+       </a>
+       <a href="https://x.com" target="_blank">
+           <i class="fa-brands fa-twitter"></i>
+       </a>
+       <a href="https://youtube.com" target="_blank">
+           <i class="fa-brands fa-youtube"></i>
+       </a>
+       <a href="https://tiktok.com" target="_blank">
+           <i class="fa-brands fa-tiktok"></i>
+       </a>
+       <p>&copy; 2025 Lustre. All rights reserved.</p>
+   </footer>
 
-    <footer> <!-- contacts and copyright -->
-        <h2>FOLLOW US</h2>
-            <a href="https://facebook.com" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://x.com" target="_blank">
-                <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="https://youtube.com" target="_blank">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
-            <a href="https://tiktok.com" target="_blank">
-                <i class="fa-brands fa-tiktok"></i>
-            </a>
-            <p>&copy; 2025 Lustre. All rights reserved.</p>
-    </footer>
+<script src="universal.js"></script>
+<script src="log-in.js"></script>
 </body>
 </html>

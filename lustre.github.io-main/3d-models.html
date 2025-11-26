@@ -1,104 +1,134 @@
-        <!-- Back to Top Button: fixed bottom right -->
-        <div class="back-to-top-container">
-            <a href="#top" class="back-to-top-btn" aria-label="Back to Top">
-                <i class="fa-solid fa-chevron-up"></i>
-            </a>
-        </div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lustre | 3D Models</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lustre | 3D Models</title>
 
-    <!-- icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <!-- icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- elegant fonts (headings serif, body sans) - switched to Cormorant Garamond for a refined catalog look -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- css link -->
-     <link rel="stylesheet" href="css/3d-models.css">
+    <!-- css links -->
+    <link rel="stylesheet" href="css/universal.css">
+    <link rel="stylesheet" href="css/3d-models.css">
 </head>
 
 <body id="top">
-    <header>
-        <!-- Serif logo lockup (text) for an elegant catalog feel -->
-        <div class="logo">
-            <a href="home.html" class="logo-link" aria-label="Lustre Home">
-                <span class="logo-mark">LUSTRE</span>
-            </a>
-        </div>
-        <!-- pwede rin yung ano parang text lang na logo -->
+   <header>
+       <div class="logo">
+           <a href="home.html" class="logo-link" aria-label="Lustre Home">
+               <span class="logo-mark">LUSTRE</span>
+           </a>
+       </div>
         <nav>
+            <button class="close-nav" id="closeNav" aria-label="Close Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
             <a href="home.html">HOME</a>
             <a href="graphic-designs.html">GRAPHIC DESIGNS</a>
             <a href="3d-models.html">3D MODELS</a>
             <a href="2d-animations.html">2D ANIMATIONS</a>
             <button class="signup-blue" onclick="window.location.href='sign-up.html'">SIGN UP</button>
         </nav>
-    </header>
+        <button class="burger" id="burgerButton" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+   </header>
 
-    <main>
-        <section class="artist-profile">
-            <img src="3d-media/PFP.JPG" alt="Maria Beatrice Magat">
-            <h1>Maria Beatrice Magat</h1>
-            <p>3D Modeler, 19 years old</p>
-            <p>I am a 2nd year multimedia arts student specializing in 3D modeling. I mainly use Autodesk Maya to start my projects and Substance Painter 3D to add finishing touches to my outputs. I recently started exploring 3D crafts, and I'm still continuously learning and improving my skills as I take on new projects and experiment with different applications and techniques.</p>
-            <p>Contact Me</p>
-            <a href="https://facebook.com" target="_blank">
-            <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-            </a>
-        </section>
+   <main>
+       <section class="artist-profile">
+           <img src="3d-media/PFP.JPG" alt="Maria Beatrice Magat">
+           <h1>Maria Beatrice Magat</h1>
+           <p>3D Modeler, 19 years old</p>
+           <p>I am a 2nd year multimedia arts student specializing in 3D modeling. I mainly use Autodesk Maya to start my projects and Substance Painter 3D to add finishing touches to my outputs. I recently started exploring 3D crafts, and I'm still continuously learning and improving my skills as I take on new projects and experiment with different applications and techniques.</p>
+           <p>Contact Me</p>
+           <a href="https://facebook.com" target="_blank">
+           <i class="fa-brands fa-facebook"></i>
+           </a>
+           <a href="https://instagram.com" target="_blank">
+           <i class="fa-brands fa-instagram"></i>
+           </a>
+       </section>
         <section class="models-catalog">
-            <h2>CATALOG</h2>
-            <div class="grid">
-                <div class="item">
-                    <img src="3d-media/UMBRA VALE RENDERED.jpg" alt="UMBRA VALE 3D Model">
-                    <p>"UMBRA VALE" 3D Model</p>
-                </div>
-                <div class="item">
-                    <img src="3d-media/BOAT RENDERED.jpg" alt="Boat 3D Model">
-                    <p>Boat 3D Model</p>
-                </div>
-                <div class="item">
-                    <img src="3d-media/UMBRA CLOSE UP VER.jpg" alt="UMBRA 3D Model">
-                    <p>"UMBRA" 3D Model</p>
-                </div>
-                <div class="item">
-                    <img src="3d-media/ISOMETRIC ROOM RENDERED-2.jpg" alt="Isometric Room 3D Model">
-                    <p>Isometric Room 3D Model</p>
-                </div>
-                <div class="item">
-                    <img src="3d-media/LabEx4_Rendered.jpg" alt="Goblets 3D Model">
-                    <p>Goblets 3D Model</p>
-                </div>
-                <!-- Add more artwork items as needed -->
+        <h2>CATALOG</h2>
+        <div class="grid">
+            <div class="item">
+            <img src="3d-media/UMBRA VALE RENDERED.jpg" alt="UMBRA VALE 3D Model">
+            <p>"UMBRA VALE" 3D Model</p>
             </div>
+            <div class="item">
+            <img src="3d-media/BOAT RENDERED.jpg" alt="Boat 3D Model">
+            <p>Boat 3D Model</p>
+            </div>
+            <div class="item">
+            <img src="3d-media/UMBRA CLOSE UP VER.jpg" alt="UMBRA 3D Model">
+            <p>"UMBRA" 3D Model</p>
+            </div>
+            <div class="item">
+            <img src="3d-media/ISOMETRIC ROOM RENDERED-2.jpg" alt="Isometric Room 3D Model">
+            <p>Isometric Room 3D Model</p>
+            </div>
+            <div class="item">
+            <img src="3d-media/LabEx4_Rendered.jpg" alt="Goblets 3D Model">
+            <p>Goblets 3D Model</p>
+            </div>
+        </div>
         </section>
-    </main>
 
-    <footer> <!-- contacts and copyright -->
-        <h2>FOLLOW US</h2>
-            <a href="https://facebook.com" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://x.com" target="_blank">
-                <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="https://youtube.com" target="_blank">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
-            <a href="https://tiktok.com" target="_blank">
-                <i class="fa-brands fa-tiktok"></i>
-            </a>
-            <p>&copy; 2025 Lustre. All rights reserved.</p>
-    </footer>
+        <aside id="popupOverlay" class="overlay">
+        <dialog class="popup-content">
+            <button id="closePopup" class="close">&times;</button>
+            <div class="media-container">
+            <img id="popupImage" alt="">
+            </div>
+            <aside class="comment-panel">
+            <div class="artwork-info">
+                <h3 id="popupTitle">Artwork Title</h3>
+                <p id="popupArtist">Artist Name</p>
+            </div>
+            <h3>Comments</h3>
+            <div id="commentList" class="comment-list"></div>
+            <div class="add-comment">
+                <textarea id="commentInput" placeholder="Add a comment..."></textarea>
+                <button id="postComment">Post</button>
+            </div>
+            </aside>
+        </dialog>
+        </aside>
+
+       <!-- Back to Top Button: fixed bottom right -->
+       <div class="back-to-top-container">
+           <a href="#top" class="back-to-top-btn" aria-label="Back to Top">
+               <i class="fa-solid fa-chevron-up"></i>
+           </a>
+       </div>
+   </main>
+
+   <footer> <!-- contacts and copyright -->
+       <h2>FOLLOW US</h2>
+           <a href="https://facebook.com" target="_blank">
+               <i class="fa-brands fa-facebook"></i>
+           </a>
+           <a href="https://instagram.com" target="_blank">
+               <i class="fa-brands fa-instagram"></i>
+           </a>
+           <a href="https://x.com" target="_blank">
+               <i class="fa-brands fa-twitter"></i>
+           </a>
+           <a href="https://youtube.com" target="_blank">
+               <i class="fa-brands fa-youtube"></i>
+           </a>
+           <a href="https://tiktok.com" target="_blank">
+               <i class="fa-brands fa-tiktok"></i>
+           </a>
+           <p>&copy; 2025 Lustre. All rights reserved.</p>
+   </footer>
 </body>
+
+<script src="universal.js"></script>
+<script src="catalog.js"></script>
 </html>

@@ -1,107 +1,137 @@
-        <!-- Back to Top Button: fixed bottom right -->
-        <div class="back-to-top-container">
-            <a href="#top" class="back-to-top-btn" aria-label="Back to Top">
-                <i class="fa-solid fa-chevron-up"></i>
-            </a>
-        </div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lustre | 2D Animations</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lustre | 2D Animations</title>
 
-    <!-- icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <!-- Icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- elegant fonts (shared) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <!-- Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- css link -->
-     <link rel="stylesheet" href="css/2d-animations.css">
+   <!-- CSS -->
+   <link rel="stylesheet" href="css/universal.css">
+   <link rel="stylesheet" href="css/2d-animations.css">
 </head>
 
 <body id="top">
-    <header>
-        <div class="logo">
-            <a href="home.html" class="logo-link" aria-label="Lustre Home">
-                <span class="logo-mark">LUSTRE</span>
-            </a>
-        </div>
-        <!-- pwede rin yung ano parang text lang na logo -->
-        <nav>
-            <a href="home.html">HOME</a>
-            <a href="graphic-designs.html">GRAPHIC DESIGNS</a>
-            <a href="3d-models.html">3D MODELS</a>
-            <a href="2d-animations.html">2D ANIMATIONS</a>
-            <button class="signup-blue" onclick="window.location.href='sign-up.html'">SIGN UP</button>
-        </nav>
-    </header>
+   <header>
+       <div class="logo">
+           <a href="home.html" class="logo-link" aria-label="Lustre Home">
+               <span class="logo-mark">LUSTRE</span>
+           </a>
+       </div>
+       <nav>
+           <button class="close-nav" id="closeNav" aria-label="Close Menu">
+               <i class="fa-solid fa-xmark"></i>
+           </button>
+           <a href="home.html">HOME</a>
+           <a href="graphic-designs.html">GRAPHIC DESIGNS</a>
+           <a href="3d-models.html">3D MODELS</a>
+           <a href="2d-animations.html">2D ANIMATIONS</a>
+           <button class="signup-blue" onclick="window.location.href='sign-up.html'">SIGN UP</button>
+       </nav>
+       <button class="burger" id="burgerButton" aria-label="Menu">
+           <i class="fa-solid fa-bars"></i>
+       </button>
+   </header>
 
-    <main>
-        <section class="artist-profile">
-            <img src="2d-media/jonahpaulin.jpg" alt="Jonah Paulin">
-            <h1>Jonah Paulin</h1>
-            <p>2D Animator, 22 years old</p>
-            <p>Hi! My name is Jonah Paulin and I am an aspiring 2D animator. I started making simple animatics using FlipaClip 4 years ago and have now added Toon Boom Harmony to my roster of programs to use for my animations. I am always looking to continue improving my skills and show a better animation by me.</p>
-            <p>Contact Me</p>
-            <a href="https://facebook.com" target="_blank">
-            <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-            </a>
-        </section>
-    <section class="twod-catalog models-catalog">
-            <h2>CATALOG</h2>
-            <div class="grid">
-                <div class="item">
-                    <video autoplay loop muted>
-                        <source src="2d-media/FinalDraft_PAULIN.mp4" type="video/mp4">
-                    </video>
-                    <p>"The Taste Of Home" Animation</p>
-                </div>
-                <div class="item">
-                    <video autoplay loop muted>
-                        <source src="2d-media/MIDTERM_PAULIN_JONAH (2).mp4" type="video/mp4">
-                    </video>
-                    <p>"The Flour Sacks And The Snail" Animation</p>
-                </div>
-                <div class="item">
-                    <video autoplay loop muted>
-                        <source src="2d-media/FINALS_JONAH_PAULIN (1).mp4" type="video/mp4">
-                    </video>
-                    <p>"Chroma Drift Jam" Animation</p>
-                </div>
-                <div class="item">
-                    <video autoplay loop muted>
-                        <source src="2d-media/Lab3_PAULIN_Jonah (1).mp4" type="video/mp4">
-                    </video>
-                    <p>"The Intruding Ball" Animation</p>
-                </div>
-                <!-- Add more artwork items as needed -->
-            </div>
-        </section>
-    </main>
+   <main>
+       <!-- Artist Profile -->
+       <section class="artist-profile">
+           <img src="2d-media/jonahpaulin.jpg" alt="Jonah Paulin">
+           <h1>Jonah Paulin</h1>
+           <p>2D Animator, 22 years old</p>
+           <p>Hi! My name is Jonah Paulin and I am an aspiring 2D animator. I started making simple animatics using FlipaClip 4 years ago and have now added Toon Boom Harmony to my roster of programs to use for my animations. I am always looking to continue improving my skills and show a better animation by me.</p>
+           <p>Contact Me</p>
+           <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+           <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+       </section>
 
-    <footer> <!-- contacts and copyright -->
-        <h2>FOLLOW US</h2>
-            <a href="https://facebook.com" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://x.com" target="_blank">
-                <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="https://youtube.com" target="_blank">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
-            <a href="https://tiktok.com" target="_blank">
-                <i class="fa-brands fa-tiktok"></i>
-            </a>
-            <p>&copy; 2025 Lustre. All rights reserved.</p>
-    </footer>
+       <!-- 2D Animations Catalog -->
+       <section class="twod-catalog models-catalog">
+           <h2>CATALOG</h2>
+           <div class="grid">
+               <div class="item">
+                   <div class="video-wrapper">
+                       <video autoplay loop muted>
+                           <source src="2d-media/FinalDraft_PAULIN.mp4" type="video/mp4">
+                       </video>
+                   </div>
+                   <p>"The Taste Of Home" Animation</p>
+               </div>
+               <div class="item">
+                   <div class="video-wrapper">
+                       <video autoplay loop muted>
+                           <source src="2d-media/MIDTERM_PAULIN_JONAH (2).mp4" type="video/mp4">
+                       </video>
+                   </div>
+                   <p>"The Flour Sacks And The Snail" Animation</p>
+               </div>
+               <div class="item">
+                   <div class="video-wrapper">
+                       <video autoplay loop muted>
+                           <source src="2d-media/FINALS_JONAH_PAULIN (1).mp4" type="video/mp4">
+                       </video>
+                   </div>
+                   <p>"Chroma Drift Jam" Animation</p>
+               </div>
+               <div class="item">
+                   <div class="video-wrapper">
+                       <video autoplay loop muted>
+                           <source src="2d-media/Lab3_PAULIN_Jonah (1).mp4" type="video/mp4">
+                       </video>
+                   </div>
+                   <p>"The Intruding Ball" Animation</p>
+               </div>
+           </div>
+       </section>
+
+       <!-- Popup Overlay -->
+       <aside id="popupOverlay" class="overlay">
+           <dialog class="popup-content">
+               <button id="closePopup" class="close">&times;</button>
+               <div class="popup-body">
+                   <div class="media-container">
+                       <video id="popupVideo" controls autoplay></video>
+                   </div>
+                   <aside class="comment-panel">
+                       <div class="artwork-info">
+                           <h3 id="popupTitle">Artwork Title</h3>
+                           <p id="popupArtist">Artist Name</p>
+                       </div>
+                       <h3>Comments</h3>
+                       <div id="commentList" class="comment-list"></div>
+                       <div class="add-comment">
+                           <textarea id="commentInput" placeholder="Add a comment..."></textarea>
+                           <button id="postComment">Post</button>
+                       </div>
+                   </aside>
+               </div>
+           </dialog>
+       </aside>
+
+       <!-- Back to Top -->
+       <div class="back-to-top-container">
+           <a href="#top" class="back-to-top-btn" aria-label="Back to Top">
+               <i class="fa-solid fa-chevron-up"></i>
+           </a>
+       </div>
+   </main>
+
+   <footer>
+       <h2>FOLLOW US</h2>
+       <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+       <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+       <a href="https://x.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+       <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+       <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+       <p>&copy; 2025 Lustre. All rights reserved.</p>
+   </footer>
 </body>
+
+   <script src="universal.js"></script>
+   <script src="2d-catalog.js"></script>
 </html>
