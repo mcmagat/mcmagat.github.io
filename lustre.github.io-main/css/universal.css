@@ -250,3 +250,30 @@ footer p {
     justify-content: space-between;
   }
 }
+
+/* ===== STYLISH DIVIDER ===== */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 4rem auto;
+  width: 80%;
+  max-width: 700px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--blue);
+  opacity: 0.5;
+}
+
+.divider span {
+  color: #1b0c59;
+  font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: 3px;
+}
